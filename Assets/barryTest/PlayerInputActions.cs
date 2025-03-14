@@ -97,7 +97,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""id"": ""4c74b320-f956-4552-add7-dee4de5465ea"",
                     ""expectedControlType"": ""Dpad"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Hold(duration=0.2)"",
                     ""initialStateCheck"": true
                 },
                 {
@@ -115,7 +115,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""name"": ""WASD"",
                     ""id"": ""d2fbf9ea-5fc3-4ff6-b32b-5b1c44a2f862"",
                     ""path"": ""2DVector"",
-                    ""interactions"": """",
+                    ""interactions"": ""Hold(duration=0.2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Move"",

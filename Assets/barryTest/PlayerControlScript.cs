@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 
 public class PlayerControlScript : MonoBehaviour
 {
@@ -44,12 +45,21 @@ public class PlayerControlScript : MonoBehaviour
         Debug.Log("Y:" + _MoveDirection.y);
         Debug.Log("X:" + _MoveDirection.x);
 
-        if (!_Paused)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, _MovePoint.position, _MoveSpeed * Time.deltaTime);
+
+        transform.position = Vector3.MoveTowards(transform.position, _MovePoint.position, _MoveSpeed * Time.deltaTime);
 
             if (Vector3.Distance(transform.position, _MovePoint.position) <= .05f)
             {
+                if (Mathf.Abs(_MoveDirection.x) > 0f && Mathf.Abs(_MoveDirection.y) > 0f)
+                {
+                    _MoveDistance = new Vector3(Mathf.Round(_MoveDirection.x), 0f, Mathf.Round(_MoveDirection.y));
+                    Collider[] _WallsCollider = Physics.OverlapSphere(_MovePoint.position + _MoveDistance, 0.2f, _StopMoveLayer);
+                    if (_WallsCollider.Length == 0)
+                    {
+                        _MovePoint.position += _MoveDistance;
+                    }
+                }
+
                 if (Mathf.Abs(_MoveDirection.x) == 1f)
                 {
                     _MoveDistance = new Vector3(_MoveDirection.x, 0f, 0f);
@@ -70,7 +80,9 @@ public class PlayerControlScript : MonoBehaviour
                     }
                 }
             }
-        }
+        
+
+        
         if (_Pause.triggered)
         {
             PauseGame();
