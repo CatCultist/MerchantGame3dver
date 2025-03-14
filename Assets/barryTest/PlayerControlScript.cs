@@ -9,6 +9,7 @@ public class PlayerControlScript : MonoBehaviour
     public PlayerInputActions _PlayerControls;
     public InputAction _Move;
     public InputAction _Pause;
+    public Animator animator;
     private Vector2 _MoveDirection;
 
     //movement var
@@ -41,9 +42,13 @@ public class PlayerControlScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         _MoveDirection = _Move.ReadValue<Vector2>();
         Debug.Log("Y:" + _MoveDirection.y);
         Debug.Log("X:" + _MoveDirection.x);
+
+        animator.SetFloat("xmov", _MoveDirection.x);
+        animator.SetFloat("ymov", _MoveDirection.y);
 
 
         transform.position = Vector3.MoveTowards(transform.position, _MovePoint.position, _MoveSpeed * Time.deltaTime);
