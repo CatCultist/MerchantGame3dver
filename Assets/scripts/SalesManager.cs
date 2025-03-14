@@ -17,6 +17,10 @@ public class SalesManager : MonoBehaviour
 
     private const float MerchantsCut = 0.90f;
 
+    private void Awake()
+    {
+        inventory = GameObject.Find("Player").GetComponent<InventoryController>();
+    }
 
     private void Sell()
     {
@@ -24,9 +28,11 @@ public class SalesManager : MonoBehaviour
 
         _price = good.basePrice * MerchantsCut * scarcityMultiplier;
 
+
         inventory.Give(_goodId, _price);
         Debug.Log("Sold wheat for: ");
         Debug.Log(_price);
+        
     }
 
     public void ButtonPressed()

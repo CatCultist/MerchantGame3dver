@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
 using Unity.VisualScripting;
@@ -23,6 +23,7 @@ public class uiController : MonoBehaviour
     void Start()
     {
         _PlayerObj = GameObject.Find("Player");
+        _Inventory = _PlayerObj.GetComponent<InventoryController>();
 
         _MoneyUI = GameObject.Find("MoneyUIParent");
         _MoneyUI.SetActive(true);
@@ -62,7 +63,7 @@ public class uiController : MonoBehaviour
         else
         {
             _MoneyValuePause.text = _Inventory.moneyCount.ToString();
-            _DebtValue.text = "1,000,000";
+            _DebtValue.text = "€1,000,000";
             _WheatValue.text = _Inventory.wheatCount.ToString();
             _FishValue.text = _Inventory.fishCount.ToString();
 

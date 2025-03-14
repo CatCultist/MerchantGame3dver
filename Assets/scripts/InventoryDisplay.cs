@@ -3,7 +3,7 @@ using TMPro;
 
 public class InventoryDisplay : MonoBehaviour
 {
-    [SerializeField] private InventoryController inventoryManager;
+    private InventoryController inventoryManager;
     public Good good;
     [SerializeField] private TextMeshProUGUI textDisplay;
 
@@ -13,6 +13,8 @@ public class InventoryDisplay : MonoBehaviour
 
     void Start()
     {
+        inventoryManager = GameObject.Find("Player").GetComponent<InventoryController>();
+
         _goodId = good.id;
         _goodName = good.name;
     }
