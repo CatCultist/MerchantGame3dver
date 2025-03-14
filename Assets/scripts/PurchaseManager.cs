@@ -15,15 +15,22 @@ public class PurchaseManager : MonoBehaviour
     
 
     [SerializeField] private float scarcityMultiplier;
-    
+
+    private void Awake()
+    {
+        inventory = GameObject.Find("Player").GetComponent<InventoryController>();
+    }
     void Purchase()
     {
         _goodId = good.id;
         _price = good.basePrice * scarcityMultiplier;
-
-        inventory.Take(_goodId, _price);
-        Debug.Log("Purchased wheat for: ");
-        Debug.Log(_price);
+        if (inventory.moneyCount >= _price)
+        {
+            inventory.Take(_goodId, _price);
+            Debug.Log("Purchased wheat for: ");
+            Debug.Log(_price);
+        }
+        Debug.Log("You're broke bruh");
     }
 
     public void ButtonPressed()

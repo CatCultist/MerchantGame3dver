@@ -13,6 +13,7 @@ public class MoneyCount : MonoBehaviour
 
     void Start()
     {
+        inventoryManager = GameObject.Find("Player").GetComponent<InventoryController>();
         moneyCountText.text = "Calculating Money Count....";
     }
     void Update()

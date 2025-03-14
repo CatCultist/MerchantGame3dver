@@ -37,12 +37,18 @@ public class InventoryController : MonoBehaviour
         switch (soldGood)
         {
             case 1:
-                wheatCount -= 1;
-                moneyCount += price;
+                if (wheatCount > 0)
+                {
+                    wheatCount -= 1;
+                    moneyCount += price;
+                }
                 break;
             case 2:
-                fishCount -= 1;
-                moneyCount += price;
+                if (fishCount > 0)
+                {
+                    fishCount -= 1;
+                    moneyCount += price;
+                }
                 break;
             default:
                 Debug.Log("Invalid good, removed, something bwoke 3:");

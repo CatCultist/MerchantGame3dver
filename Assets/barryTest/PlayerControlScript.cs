@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
+using UnityEngine.SceneManagement;
 
 public class PlayerControlScript : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerControlScript : MonoBehaviour
     public PlayerInputActions _PlayerControls;
     public InputAction _Move;
     public InputAction _Pause;
+    public InputAction _Interact;
     public Animator animator;
     private Vector2 _MoveDirection;
 
@@ -19,11 +21,28 @@ public class PlayerControlScript : MonoBehaviour
     private Vector3 _MoveDistance;
 
     //pause var
-    private bool _Paused;
+    public bool _Paused;
+
+    //variable for restoring previous position when exiting shop
+    public Vector3 _PreviousPosition;
+    public string _PreviousScene;
+
+    //to ensure only 1 player is ever created
+    private static PlayerControlScript instance = null;
 
     private void Awake()
     {
-        _PlayerControls = new PlayerInputActions();
+        if (instance == null)
+        {
+            instance = this;
+            _PlayerControls = new PlayerInputActions();
+            DontDestroyOnLoad(gameObject);
+            _PreviousScene = null;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnEnable()
@@ -32,6 +51,8 @@ public class PlayerControlScript : MonoBehaviour
         _Move.Enable();
         _Pause = _PlayerControls.Player.Pause;
         _Pause.Enable();
+        _Interact = _PlayerControls.Player.Interact;
+        _Interact.Enable();
     }
 
     void Start()
@@ -94,17 +115,25 @@ public class PlayerControlScript : MonoBehaviour
         }
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         if (!_Paused)
         {
             _Paused = true;
             Time.timeScale = 0f;
+
         }
         else if (_Paused)
         {
             _Paused = false;
             Time.timeScale = 1f;
+            if (_PreviousScene != null)
+            {
+                SceneManager.LoadScene(_PreviousScene);
+                _MovePoint.transform.position = _PreviousPosition;
+                transform.position = _PreviousPosition;
+                _PreviousScene = null;
+            }
         }
 
     }
