@@ -2092,8 +2092,6 @@ GameObject:
   - component: {fileID: 1635048787}
   - component: {fileID: 1635048786}
   - component: {fileID: 1635048785}
-  - component: {fileID: 1635048788}
-  - component: {fileID: 1635048789}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2174,38 +2172,6 @@ Transform:
   - {fileID: 1503623802}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1635048788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635048784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fde3ec80ecf9c5b48a9147aaaf362b43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wheatCount: 2
-  fishCount: 3
-  moneyCount: 5
---- !u!114 &1635048789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1635048784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7580d2445e526c54a823c54be35e5e08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _InteractionPoint: {fileID: 0}
-  _InteractionRadius: 1
-  _InteractableMask:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!1 &1662735614
 GameObject:
   m_ObjectHideFlags: 0

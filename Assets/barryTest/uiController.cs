@@ -17,6 +17,7 @@ public class uiController : MonoBehaviour
 
     //player object to refer to public variables
     private GameObject _PlayerObj;
+    private InventoryController _Inventory;
     
 
     void Start()
@@ -46,7 +47,7 @@ public class uiController : MonoBehaviour
             PauseGame();
             }
 
-        _MoneyValueUI.text = _PlayerObj.GetComponent<InventoryController>().moneyCount.ToString();
+        _MoneyValueUI.text = _Inventory.moneyCount.ToString();
 
     }
 
@@ -60,10 +61,10 @@ public class uiController : MonoBehaviour
         }
         else
         {
-            _MoneyValuePause.text = _PlayerObj.GetComponent<InventoryController>().moneyCount.ToString();
+            _MoneyValuePause.text = _Inventory.moneyCount.ToString();
             _DebtValue.text = "1,000,000";
-            _WheatValue.text = _PlayerObj.GetComponent<InventoryController>().wheatCount.ToString();
-            _FishValue.text = _PlayerObj.GetComponent<InventoryController>().fishCount.ToString();
+            _WheatValue.text = _Inventory.wheatCount.ToString();
+            _FishValue.text = _Inventory.fishCount.ToString();
 
             _MoneyUI.SetActive(false);
             _PauseUI.SetActive(true);
