@@ -11,7 +11,9 @@ public class SalesManager : MonoBehaviour
     private int _goodId;
     private float _price;
 
+
     [SerializeField] private float scarcityMultiplier;
+
 
     private const float MerchantsCut = 0.90f;
 
@@ -19,7 +21,9 @@ public class SalesManager : MonoBehaviour
     private void Sell()
     {
         _goodId = good.id;
+
         _price = good.basePrice * MerchantsCut * scarcityMultiplier;
+
         inventory.Give(_goodId, _price);
         Debug.Log("Sold wheat for: ");
         Debug.Log(_price);
