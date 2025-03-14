@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public class InventoryController : MonoBehaviour
 {
     public static InventoryController Instance;
-    public int wheatCount;
-    public int fishCount;
-    public float moneyCount;
+    public int wheatCount = 0;
+    public int fishCount = 0;
+    public float moneyCount = 5;
 
     private void Awake()
     {
