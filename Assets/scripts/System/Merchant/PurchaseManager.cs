@@ -10,6 +10,8 @@ public class PurchaseManager : MonoBehaviour
     public Good good;
     [SerializeField] private TextMeshProUGUI buyButton;
 
+    [SerializeField] private TimeManager timeManager;
+    
     private int _goodId;
     private float _price;
     
@@ -35,6 +37,7 @@ public class PurchaseManager : MonoBehaviour
 
     public void ButtonPressed()
     {
+        timeManager.AdvanceTime();
         Purchase();
     }
 }
