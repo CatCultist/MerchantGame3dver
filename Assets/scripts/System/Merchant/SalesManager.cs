@@ -7,6 +7,8 @@ public class SalesManager : MonoBehaviour
     public InventoryController inventory;
     public Good good;
     [SerializeField] TextMeshProUGUI buyButton;
+    
+    [SerializeField] private TimeManager timeManager;
 
     private int _goodId;
     private float _price;
@@ -14,10 +16,11 @@ public class SalesManager : MonoBehaviour
     [SerializeField] private float scarcityMultiplier;
 
     private const float MerchantsCut = 0.90f;
-
+    
 
     private void Sell()
     {
+        
         _goodId = good.id;
         _price = good.basePrice * MerchantsCut * scarcityMultiplier;
         inventory.Give(_goodId, _price);
@@ -28,5 +31,6 @@ public class SalesManager : MonoBehaviour
     public void ButtonPressed()
     {
         Sell();
+        timeManager.AdvanceTime();
     }
 }
