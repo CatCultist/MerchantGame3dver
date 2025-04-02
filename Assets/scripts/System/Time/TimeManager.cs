@@ -7,13 +7,7 @@ public class TimeManager : MonoBehaviour
     private int _currentDayNum; // when using UI reference the "currentDay" variable instead, 
 
     public string currentDay;
-
-
-    private void Awake()
-    {
-
-    }
-
+    
     private void Start()
     {
         // This would have the day start at 9:00 on sunday, 
@@ -26,22 +20,22 @@ public class TimeManager : MonoBehaviour
         if (_currentHour < 24f)
         {
             _currentHour++;
-            Debug.Log(currentDay + ", " + Convert.ToString(_currentHour));
+            Debug.Log(currentDay + ", " + Convert.ToString(_currentHour)); // Can be removed when no longer needed for debug
         }
         else
         {
-            Debug.Log("Time is over");
+            Debug.Log("Time is over"); // Debugging purposes, will be replaced with functionality later
         }
     }
 
     public void AdvanceDay() // Call this variable ONLY when the character sleeps
     {
-        if (_currentDayNum == 7)
+        if (_currentDayNum == 7) // must be placed before the addition to ensure monday isnt skipped
         {
             _currentDayNum = 0;
         }
 
-        _currentHour = 9;
+        _currentHour = 9; // default morning time, could be changed to whatever suits
         _currentDayNum++;
 
         // setting a string variable based on the number for ui and display purposes

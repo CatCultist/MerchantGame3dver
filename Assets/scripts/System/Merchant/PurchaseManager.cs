@@ -15,12 +15,12 @@ public class PurchaseManager : MonoBehaviour
     private int _goodId;
     private float _price;
     
-    [SerializeField] private float scarcityMultiplier;
+    [SerializeField] private float baseScarcityMultiplier;
     
     void Purchase()
     {
         _goodId = good.id;
-        _price = good.basePrice * scarcityMultiplier;
+        _price = good.basePrice * baseScarcityMultiplier;
         inventory.Take(_goodId, _price);
         Debug.Log("Purchased wheat for: ");
         Debug.Log(_price);
