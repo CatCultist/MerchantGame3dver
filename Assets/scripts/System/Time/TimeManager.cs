@@ -1,92 +1,94 @@
-using System;
 using UnityEngine;
 
-public class TimeManager : MonoBehaviour
+namespace System.Time
 {
-    private int _currentHour;
-    private int _currentDayNum; // when using UI reference the "currentDay" variable instead, 
+    public class TimeManager : MonoBehaviour
+    {
+        private int _currentHour;
+        private int _currentDayNum; // when using UI reference the "currentDay" variable instead, 
 
-    public string currentDay;
+        public string currentDay;
     
-    private void Start()
-    {
-        // This would have the day start at 9:00 on sunday, 
-        _currentHour = 9;
-        _currentDayNum = 7;
-    }
-
-    public void AdvanceTime() // Call this variable when taking actions, no inputs required
-    {
-        if (_currentHour < 24f)
+        private void Start()
         {
-            _currentHour++;
-            Debug.Log(currentDay + ", " + Convert.ToString(_currentHour)); // Can be removed when no longer needed for debug
-        }
-        else
-        {
-            Debug.Log("Time is over"); // Debugging purposes, will be replaced with functionality later
-        }
-    }
-
-    public void AdvanceDay() // Call this variable ONLY when the character sleeps
-    {
-        if (_currentDayNum == 7) // must be placed before the addition to ensure monday isnt skipped
-        {
-            _currentDayNum = 0;
+            // This would have the day start at 9:00 on sunday, 
+            _currentHour = 9;
+            _currentDayNum = 7;
         }
 
-        _currentHour = 9; // default morning time, could be changed to whatever suits
-        _currentDayNum++;
-
-        // setting a string variable based on the number for ui and display purposes
-        // REFERENCE the "currentDay" variable when building UI
-        switch (_currentDayNum)
+        public void AdvanceTime() // Call this variable when taking actions, no inputs required
         {
-            case 1:
+            if (_currentHour < 24f)
             {
-                currentDay = "Monday";
-                break;
+                _currentHour++;
+                Debug.Log(currentDay + ", " + Convert.ToString(_currentHour)); // Can be removed when no longer needed for debug
             }
-            case 2:
+            else
             {
-                currentDay = "Tuesday";
-                break;
+                Debug.Log("Time is over"); // Debugging purposes, will be replaced with functionality later
             }
-            case 3:
+        }
+
+        public void AdvanceDay() // Call this variable ONLY when the character sleeps
+        {
+            if (_currentDayNum == 7) // must be placed before the addition to ensure monday isnt skipped
             {
-                currentDay = "Wednesday";
-                break;
+                _currentDayNum = 0;
             }
-            case 4:
+
+            _currentHour = 9; // default morning time, could be changed to whatever suits
+            _currentDayNum++;
+
+            // setting a string variable based on the number for ui and display purposes
+            // REFERENCE the "currentDay" variable when building UI
+            switch (_currentDayNum)
             {
-                currentDay = "Thursday";
-                break;
-            }
-            case 5:
-            {
-                currentDay = "Friday";
-                break;
-            }
-            case 6:
-            {
-                currentDay = "Saturday";
-                break;
-            }
-            case 7:
-            {
-                currentDay = "Sunday";
-                break;
-            }
-            default:
-            {
-                Debug.Log("Incorrect Day Entered");
-                break;
-            }
+                case 1:
+                {
+                    currentDay = "Monday";
+                    break;
+                }
+                case 2:
+                {
+                    currentDay = "Tuesday";
+                    break;
+                }
+                case 3:
+                {
+                    currentDay = "Wednesday";
+                    break;
+                }
+                case 4:
+                {
+                    currentDay = "Thursday";
+                    break;
+                }
+                case 5:
+                {
+                    currentDay = "Friday";
+                    break;
+                }
+                case 6:
+                {
+                    currentDay = "Saturday";
+                    break;
+                }
+                case 7:
+                {
+                    currentDay = "Sunday";
+                    break;
+                }
+                default:
+                {
+                    Debug.Log("Incorrect Day Entered");
+                    break;
+                }
                     
+            }
         }
+
+
     }
-
-
 }
     
     

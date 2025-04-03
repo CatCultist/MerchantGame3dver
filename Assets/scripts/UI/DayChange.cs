@@ -1,13 +1,17 @@
+using System.Time;
 using UnityEngine;
 
-public class DayChange : MonoBehaviour
+namespace UI
 {
-    // Temporary script for UI testing, please ignore
-    [SerializeField] private TimeManager timeManager;
-    
-    public void Pressed()
+    public class DayChange : MonoBehaviour
     {
-        timeManager.AdvanceDay();
+        // Temporary script for UI testing, please ignore
+        [SerializeField] private TimeManager timeManager;
+    
+        public void Pressed()
+        {
+            timeManager.AdvanceDay();
+        }
     }
 }
 

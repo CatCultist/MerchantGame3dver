@@ -1,3 +1,4 @@
+using System.TradeGoods;
 using UnityEngine;
 using TMPro;
 
