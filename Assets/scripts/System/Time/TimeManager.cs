@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace System.Time
@@ -12,7 +13,7 @@ namespace System.Time
         private void Start()
         {
             // This would have the day start at 9:00 on sunday, 
-            _currentHour = 9;
+            _currentHour = 8;
             _currentDayNum = 7;
         }
 
@@ -27,6 +28,35 @@ namespace System.Time
             {
                 Debug.Log("Time is over"); // Debugging purposes, will be replaced with functionality later
             }
+
+            switch (_currentHour) // For UI functionality, simply activate and deactivate UI frames here
+            {
+                case 12:
+                {
+                    Debug.Log("Afternoon"); // Replace debug with UI functionality in future
+                    break;
+                }
+
+                case 16:
+                {
+                    Debug.Log("Evening"); // same as above
+                    break;
+                }
+
+                case 20:
+                {
+                    Debug.Log("Night"); // same as above
+                    break;
+                }
+
+                case 24:
+                {
+                    Debug.Log("Midnight"); // again see above
+                    break;
+                }
+            }
+            
+            
         }
 
         public void AdvanceDay() // Call this variable ONLY when the character sleeps
@@ -36,7 +66,7 @@ namespace System.Time
                 _currentDayNum = 0;
             }
 
-            _currentHour = 9; // default morning time, could be changed to whatever suits
+            _currentHour = 8; // default morning time, could be changed to whatever suits
             _currentDayNum++;
 
             // setting a string variable based on the number for ui and display purposes

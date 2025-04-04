@@ -1,3 +1,4 @@
+
 using System.Time;
 using System.TradeGoods;
 using UnityEngine;
@@ -92,7 +93,7 @@ namespace System.Merchant
             Debug.Log(_price); // Debugging purposes, can be removed with proper UI implementation
         }
 
-        public void ButtonPressed() // ALWAYS use this variable when calling from UI, helps protect data leaks
+        public void ButtonPressed() // ALWAYS use this function when calling from UI, helps protect data leaks
         {
             Purchase();
             timeManager.AdvanceTime(); // Advances time by an hour

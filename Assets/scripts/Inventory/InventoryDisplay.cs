@@ -1,39 +1,42 @@
 using System.TradeGoods;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class InventoryDisplay : MonoBehaviour
+namespace Inventory
 {
-    [SerializeField] private InventoryController inventoryManager;
-    public Good good;
-    [SerializeField] private TextMeshProUGUI textDisplay;
-
-    private string _goodName;
-    private int _goodCount;
-    private int _goodId;
-
-    void Start()
+    public class InventoryDisplay : MonoBehaviour
     {
-        _goodId = good.id;
-        _goodName = good.name;
-    }
+        [SerializeField] private InventoryController inventoryManager;
+        public Good good;
+        [SerializeField] private TextMeshProUGUI textDisplay;
 
-    void Update()
-    {
-        switch (_goodId)
+        private string _goodName;
+        private int _goodCount;
+        private int _goodId;
+
+        private void Start()
         {
-            case 1:
-                _goodCount = inventoryManager.wheatCount;
-                break;
-            case 2:
-                _goodCount = inventoryManager.fishCount;
-                break;
-            default:
-                Debug.Log("Invalid good, removed, something bwoke 3:");
-                break;
+            _goodId = good.id;
+            _goodName = good.name;
         }
-        
-        textDisplay.text = _goodName + ": " + _goodCount;
-    }
 
+        private void Update()
+        {
+            switch (_goodId)
+            {
+                case 1:
+                    _goodCount = inventoryManager.wheatCount;
+                    break;
+                case 2:
+                    _goodCount = inventoryManager.fishCount;
+                    break;
+                default:
+                    Debug.Log("Invalid good, removed, something bwoke 3:");
+                    break;
+            }
+        
+            textDisplay.text = _goodName + ": " + _goodCount;
+        }
+
+    }
 }
