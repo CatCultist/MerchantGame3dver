@@ -87,12 +87,24 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  _Interact:
+    m_Name: Interact
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 33e828ce-2a67-4465-a259-2ba17c37ecf5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   animator: {fileID: 6702475359146288265}
   _MoveSpeed: 5
   _MovePoint: {fileID: 8873239369450865400}
   _StopMoveLayer:
     serializedVersion: 2
     m_Bits: 64
+  _Paused: 0
+  _PreviousPosition: {x: 0, y: 0, z: 0}
+  _PreviousScene: 
 --- !u!114 &8203646431410684085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +198,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
+  m_Sprite: {fileID: 801051548, guid: d8dbc45333dd5ef42bdad1ccfbef2988, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
