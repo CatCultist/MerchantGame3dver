@@ -551,6 +551,83 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142108829}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &164371632
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1172366
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.71768665
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.020226
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7824753648676844136, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.3530302
+      objectReference: {fileID: 0}
+    - target: {fileID: -7824753648676844136, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.699
+      objectReference: {fileID: 0}
+    - target: {fileID: -6093592463355912122, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: df5651e4355042c41960bd2697fe7fbb, type: 2}
+    - target: {fileID: 919132149155446097, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_Name
+      value: Med Barn (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865064391339405807, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865064391339405807, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.699
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a6e53c4e031798e4cbf2c505ee26c994, type: 3}
 --- !u!1 &172375259
 GameObject:
   m_ObjectHideFlags: 0
@@ -14764,6 +14841,67 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424304876}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1480587164
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.512356
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.928608
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -804731622281664130, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 369b95e626d153b4b97ee23a49c7f127, type: 2}
+    - target: {fileID: 919132149155446097, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
+      propertyPath: m_Name
+      value: Med Barn (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e000e9d745c97f44eb710ffeb9fa05da, type: 3}
 --- !u!1 &1562030044
 GameObject:
   m_ObjectHideFlags: 0
@@ -26112,6 +26250,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077291409}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2081964805
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.014353
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.172113
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ba2d4b4518ca54cba9e3f835941339, type: 2}
+    - target: {fileID: -1461304994638716399, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ba2d4b4518ca54cba9e3f835941339, type: 2}
+    - target: {fileID: -678588488315902003, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ba2d4b4518ca54cba9e3f835941339, type: 2}
+    - target: {fileID: 919132149155446097, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
+      propertyPath: m_Name
+      value: Med Barn
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 854b116505cb5cd4da613a9f1c634010, type: 3}
 --- !u!1001 &2108661184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26366,3 +26573,6 @@ SceneRoots:
   - {fileID: 1932892759}
   - {fileID: 2108661184}
   - {fileID: 195166875}
+  - {fileID: 2081964805}
+  - {fileID: 1480587164}
+  - {fileID: 164371632}
