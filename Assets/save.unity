@@ -1698,107 +1698,6 @@ Transform:
   - {fileID: 2062626960}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1156399796
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 177988927198853689, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_Name
-      value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 177988927198853689, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7691626723235167410, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0e15eb2d11654394dbda2bd864fa6c31, type: 3}
 --- !u!1 &1258839054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,6 +2359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877022395}
   serializedVersion: 2
+<<<<<<< Updated upstream:Assets/save.unity
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.5, y: 0.45, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -2467,6 +2367,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 155337470260110494, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: m_Name
+      value: Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700003604595668014, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: _Interact.m_Name
+      value: Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051649953378778301, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.91049004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051649953378778301, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051649953378778301, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.1257524
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051649953378778301, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051649953378778301, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051649953378778301, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051649953378778301, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051649953378778301, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051649953378778301, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4051649953378778301, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979978958502146229, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: _MainCamera
+      value: 
+      objectReference: {fileID: 1918075585}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+>>>>>>> Stashed changes:Assets/!Scenes/save.unity
 --- !u!1 &1918075583
 GameObject:
   m_ObjectHideFlags: 0
@@ -17596,5 +17559,12 @@ SceneRoots:
   - {fileID: 1046986156}
   - {fileID: 1942296510}
   - {fileID: 636384409}
+<<<<<<< Updated upstream:Assets/save.unity
+<<<<<<< Updated upstream:Assets/save.unity
   - {fileID: 1156399796}
   - {fileID: 1877022400}
+=======
+=======
+>>>>>>> Stashed changes:Assets/!Scenes/save.unity
+  - {fileID: 1827282280}
+>>>>>>> Stashed changes:Assets/!Scenes/save.unity
