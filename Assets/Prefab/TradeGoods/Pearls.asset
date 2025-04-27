@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdbd5f9ef3d7de4281ad20f4919d475, type: 3}
+  m_Name: Pearls
+  m_EditorClassIdentifier: 
+  tradeGoodID: P12
+  tradeGoodName: Pearls
+  tradeGoodDescription: Pearls are a luxury good used in jewlery and the biggest
+    are kept as trophies
+  tradeGoodBasePrice: 100
+  tradeGoodBaseRestock: 21
+  tradeGoodBaseConsumption: 1
+  tradeGoodBaseProduction: 100
+  tradeGoodBaseProductionRate: 5
+  tradeGoodBaseDays: []
