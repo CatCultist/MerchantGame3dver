@@ -87,12 +87,24 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  _Interact:
+    m_Name: Interact
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 2f0619ab-3a07-4995-850b-8de9f665bfd9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   animator: {fileID: 6702475359146288265}
   _MoveSpeed: 5
   _MovePoint: {fileID: 8873239369450865400}
   _StopMoveLayer:
     serializedVersion: 2
     m_Bits: 64
+  _Paused: 0
+  _PreviousPosition: {x: 0, y: 0, z: 0}
+  _PreviousScene: 
 --- !u!114 &8203646431410684085
 MonoBehaviour:
   m_ObjectHideFlags: 0
