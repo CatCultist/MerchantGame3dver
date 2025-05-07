@@ -21,12 +21,12 @@ namespace GameplaySystems.Merchant
             Instance = this;
         }
 
-        public void OnItemSold(int price, string merchantID)
+        public void OnItemSold(int price, string merchantID, string itemID)
         {
             
         }
 
-        public void OnItemPurchased(int price, string merchantID)
+        public void OnItemPurchased(int price, string merchantID, string itemID)
         {
             
         }

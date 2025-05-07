@@ -13,12 +13,14 @@ namespace GameplaySystems.TradeGoods
         public string tradeGoodName;
         [Tooltip("Trade good description, displays in UI")] 
         public string tradeGoodDescription;
+        [Tooltip("2D sprite for UI")]
+        public Sprite tradeGoodSprite;
         
         [Header("Trade Good Merchant Values")]
         [Tooltip("Base price of goods, e.g gems will always be pricier than wheat")]
         public float tradeGoodBasePrice;
         [Tooltip("Base level restock each week before regional scarcity is considered")]
-        public float tradeGoodBaseRestock;
+        public int tradeGoodBaseRestock;
         [Tooltip("How much of each good is consumed by the population at time intervals")]
         public float tradeGoodBaseConsumption;
         
@@ -29,5 +31,6 @@ namespace GameplaySystems.TradeGoods
         public float tradeGoodBaseProductionRate;
         [Tooltip("On what days will these goods restock")]
         public string[] tradeGoodBaseDays;
+
     }
 }
