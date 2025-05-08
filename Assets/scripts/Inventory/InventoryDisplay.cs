@@ -1,10 +1,12 @@
+/*
 using UnityEngine;
 using TMPro;
+using GameplaySystems.TradeGoods;
 
 public class InventoryDisplay : MonoBehaviour
 {
     private InventoryController inventoryManager;
-    public Good good;
+    public TradeGoods good;
     [SerializeField] private TextMeshProUGUI textDisplay;
 
     private string _goodName;
@@ -15,7 +17,7 @@ public class InventoryDisplay : MonoBehaviour
     {
         inventoryManager = GameObject.Find("Player").GetComponent<InventoryController>();
 
-        _goodId = good.id;
+        _goodId = good.tradeGoodID;
         _goodName = good.name;
     }
 
@@ -38,3 +40,4 @@ public class InventoryDisplay : MonoBehaviour
     }
 
 }
+*/

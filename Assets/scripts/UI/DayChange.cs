@@ -7,7 +7,7 @@ public class DayChange : MonoBehaviour
     
     public void Pressed()
     {
-        timeManager.AdvanceDay();
+        timeManager.AdvanceDays();
     }
 }
 
