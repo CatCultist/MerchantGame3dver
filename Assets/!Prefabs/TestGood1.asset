@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdbd5f9ef3d7de4281ad20f4919d475, type: 3}
+  m_Name: TestGood1
+  m_EditorClassIdentifier: 
+  tradeGoodID: 0
+  tradeGoodName: Test1
+  tradeGoodDescription: Used to test functionality
+  tradeGoodSprite: {fileID: -4434642075138586240, guid: 32d5ae57534477848a5c5bce83eb3463, type: 3}
+  tradeGoodBasePrice: 1
+  tradeGoodBaseRestock: 5
+  tradeGoodBaseConsumption: 5
+  tradeGoodBaseProduction: 5
+  tradeGoodBaseProductionRate: 1
+  tradeGoodBaseDays:
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday
