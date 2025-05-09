@@ -33,9 +33,11 @@ namespace GameplaySystems.Merchant
         
         private MerchantStockController _merchantStock;
 
+        private MerchantUIController _merchantUIController;
         private void Awake()
         {
             _merchantStock = GetComponent<MerchantStockController>();
+            _merchantUIController = GameObject.Find("MerchantUIParent").GetComponent<MerchantUIController>();
         }
         
         public void OnItemPurchase(string itemID, int quantity, float itemPrice, float playerPrice)
@@ -76,12 +78,14 @@ namespace GameplaySystems.Merchant
                 merchantScoreChange = Convert.ToInt32(_transactionChance - randomNumber);
                 MerchantScore += Convert.ToInt32(merchantScoreChange * merchantHostility);
                 Debug.Log(merchantScoreChange.ToString() + " merchant score");
+                _merchantUIController.NpcResponse(2);
                 return;
             }
 
             Debug.Log("Merchant accepts offer - gain opinion");  // For debugging, replace with UI functionality
             merchantScoreChange = Convert.ToInt32(_transactionChance - randomNumber);
             MerchantScore += merchantScoreChange;
+            _merchantUIController.NpcResponse(1);
             
             Debug.Log(merchantScoreChange.ToString() + " merchant score");
 
@@ -136,13 +140,15 @@ namespace GameplaySystems.Merchant
                 merchantScoreChange = Convert.ToInt32(_transactionChance - randomNumber);
                 MerchantScore += Convert.ToInt32(merchantScoreChange * merchantHostility);
                 Debug.Log(merchantScoreChange.ToString() + " merchant score");
+                _merchantUIController.NpcResponse(2);
                 return;
             }
 
             Debug.Log("Merchant accepts offer - gain opinion");  // For debugging, replace with UI functionality
             merchantScoreChange = Convert.ToInt32(_transactionChance - randomNumber);
             MerchantScore += merchantScoreChange;
-            
+            _merchantUIController.NpcResponse(1);
+
             Debug.Log(merchantScoreChange.ToString() + " merchant score");
 
             _merchantStock.OnAddStock(itemID, quantity, playerPrice);

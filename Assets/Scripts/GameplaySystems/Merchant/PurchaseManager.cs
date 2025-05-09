@@ -7,14 +7,13 @@ using GameplaySystems.TradeGoods;
 
 public class PurchaseManager : MonoBehaviour
 {
-    /*
     public InventoryController inventory;
     public TradeGoods good;
     [SerializeField] private TextMeshProUGUI buyButton;
 
     [SerializeField] private TimeManager timeManager;
     
-    private int _goodId;
+    private string _goodId;
     private float _price;
     
 
@@ -26,21 +25,19 @@ public class PurchaseManager : MonoBehaviour
     }
     void Purchase()
     {
-        _goodId = good.id;
-        _price = good.basePrice * scarcityMultiplier;
-        if (inventory.moneyCount >= _price)
+        _goodId = good.tradeGoodID;
+        _price = good.tradeGoodBasePrice * scarcityMultiplier;
+        if (inventory._PlayerMoney >= _price)
         {
             inventory.Take(_goodId, _price);
-            Debug.Log("Purchased wheat for: ");
-            Debug.Log(_price);
         }
         Debug.Log("You're broke bruh");
     }
 
     public void ButtonPressed()
     {
-        timeManager.AdvanceTime();
+        //timeManager.AdvanceTime();
         Purchase();
     }
-    */
+
 }

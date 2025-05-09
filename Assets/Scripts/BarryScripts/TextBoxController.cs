@@ -3,7 +3,10 @@ using TMPro;
 using UnityEngine.UI;
 public class TextBoxController : MonoBehaviour
 {
-    public NpcObj _NpcObj;
+    [SerializeField] MerchantUIController _MerchantUI;
+
+    [HideInInspector] public GameObject _NpcGameObject;
+    [HideInInspector] public NpcObj _NpcObj;
     
 
     [SerializeField] private GameObject _DialogueBox;
@@ -23,6 +26,8 @@ public class TextBoxController : MonoBehaviour
 
     public void StartDialogue()
     {
+        _NpcObj = _NpcGameObject.GetComponent<TalkNPC>()._NpcObj;
+
         _NpcSprite.SetActive(true);
         _TextBack.SetActive(true);
         _TextScript.SetActive(true);
@@ -73,13 +78,13 @@ public class TextBoxController : MonoBehaviour
             //Case for dialogue that leads into trading
             case 1:
                 //this case will display a text box and lead to a dialogue option to trade; then either bring up the trading screen or return to gameplay
-                if (_TextStep <= _TextPages)
+                if (_TextStep < _TextPages)
                 {
                     _DialogueField.text = _NpcObj._NpcDialogue[_TextStep];
                 }
                 else if (_TextStep <= _TextPages)
                 {
-                    EndDialogue();
+                    BeginTrading();
                 }
                 else
                 {
@@ -118,6 +123,17 @@ public class TextBoxController : MonoBehaviour
         }
     }
 
+    public void BeginTrading()
+    {   
+        _MerchantUI._NpcGameObject = _NpcGameObject;
+        _NpcSprite.SetActive(false);
+        _TextBack.SetActive(false);
+        _TextScript.SetActive(false);
+        _TextStep = 0;
+        _MerchantUI.StartTrading();
+        
+
+    }
     public void AdvanceOnInput()
     {
         if (_FirstLinePrinted)

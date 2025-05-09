@@ -27,8 +27,10 @@ public class uiController : MonoBehaviour
 
     //text boxes
     [SerializeField] private GameObject _TextBoxUI;
-    public NpcObj _NpcDialogue = null;
-    public bool _TalkToNPC;
+    [HideInInspector]public GameObject _NpcGameObject;
+    [HideInInspector]public bool _TalkToNPC;
+
+
 
     //to ensure only 1 UI is ever created
     private static uiController instance = null;
@@ -52,7 +54,7 @@ public class uiController : MonoBehaviour
     void Start()
     { 
         _Inventory = _PlayerObj.GetComponent<InventoryController>();
-
+        _NpcGameObject = null;
         _MoneyValueUI = GameObject.Find("MoneyValueTextUI").GetComponent<TextMeshProUGUI>();
 
         
@@ -81,7 +83,7 @@ public class uiController : MonoBehaviour
         }
 
 
-        _MoneyValueUI.text = _Inventory.moneyCount.ToString();
+        _MoneyValueUI.text = _Inventory._PlayerMoney.ToString();
 
     }
 
@@ -96,10 +98,8 @@ public class uiController : MonoBehaviour
         }
         else
         {
-            _MoneyValuePause.text = _Inventory.moneyCount.ToString();
+            _MoneyValuePause.text = _Inventory._PlayerMoney.ToString();
             _DebtValue.text = "€1,000,000";
-            _WheatValue.text = _Inventory.wheatCount.ToString();
-            _FishValue.text = _Inventory.fishCount.ToString();
 
             _MoneyUI.SetActive(false);
             _PauseUI.SetActive(true);
@@ -109,7 +109,7 @@ public class uiController : MonoBehaviour
 
     public void TalkUI()
     {
-        _TextBoxUI.GetComponent<TextBoxController>()._NpcObj = _NpcDialogue;
+        _TextBoxUI.GetComponent<TextBoxController>()._NpcGameObject = _NpcGameObject;
         if (_TalkToNPC)
         {
 

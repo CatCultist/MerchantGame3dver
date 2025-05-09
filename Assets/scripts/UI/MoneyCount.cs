@@ -18,7 +18,7 @@ public class MoneyCount : MonoBehaviour
     }
     void Update()
     {
-        _money = (decimal)inventoryManager.moneyCount;
+        _money = (decimal)inventoryManager._PlayerMoney;
         _money = Decimal.Round(_money, 2);
         moneyCountText.text = "Money: " + _money.ToString("C");
     }
