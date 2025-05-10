@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _TradeGood: {fileID: 0}
   _OfferPosition: {fileID: 0}
+  _IsNpcItem: 0
 --- !u!222 &4446706682458205738
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -16,6 +16,12 @@ public class ItemHolderInv : MonoBehaviour, IPointerClickHandler
 
         _OfferPosition = GameObject.Find("OfferPanel").transform;
         _MerchantUI = GameObject.Find("MerchantUIParent").GetComponent<MerchantUIController>();
+        
+    }
+
+    public void SetGood(TradeGoods _Item)
+    {
+        _TradeGood = _Item;
         gameObject.GetComponent<Image>().sprite = _TradeGood.tradeGoodSprite; 
     }
     public void OnPointerClick(PointerEventData eventData)
