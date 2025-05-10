@@ -25,7 +25,7 @@ public class MerchantUIController : MonoBehaviour
     [HideInInspector] public GameObject _NpcGameObject;
     private NpcObj _NpcObj;
 
-    [HideInInspector] public int _TradeOwner = 0;
+    [HideInInspector] public int _TradeType = 0;
     [HideInInspector] public TradeGoods _TradeGood;
     [HideInInspector] public int _Quantity;
     [HideInInspector] public float _PlayerOffer;
@@ -66,14 +66,21 @@ public class MerchantUIController : MonoBehaviour
 
     public void TradeItem()
     {
-        _PlayerOffer = float.Parse(_OfferField.GetComponent<TMP_InputField>().text);
-        if (_PlayerOffer <= 0)
+        try
+        {
+            _PlayerOffer = float.Parse(_OfferField.GetComponent<TMP_InputField>().text);
+        }
+        catch
+        {
+            _PlayerOffer = 0;
+        }
+        if (_PlayerOffer == 0)
         {
             NpcResponse(3);
             return;
         }
             //check if item offered is from the player or npc
-            switch (_TradeOwner)
+            switch (_TradeType)
             {
                 case 0:
                     Debug.Log("Cannot buy/sell nothing!");
