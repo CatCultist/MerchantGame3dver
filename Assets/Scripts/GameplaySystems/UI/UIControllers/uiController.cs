@@ -13,16 +13,12 @@ public class uiController : MonoBehaviour
     //pause screen
     [SerializeField] private GameObject _PauseOverlay;
     [SerializeField] private GameObject _PauseUI;
-    private TextMeshProUGUI _FishValue;
-    private TextMeshProUGUI _WheatValue;
-    private TextMeshProUGUI _MoneyValuePause;
-    private TextMeshProUGUI _DebtValue;
     //--
 
 
     //player object to refer to public variables
-    [SerializeField] private GameObject _PlayerObj;
-    [SerializeField] private InventoryController _Inventory;
+     private GameObject _PlayerObj;
+     private InventoryController _Inventory;
     //--
 
     //text boxes
@@ -52,6 +48,8 @@ public class uiController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        _PlayerObj = GameObject.Find("Player");
         //--
     }
 
@@ -62,10 +60,6 @@ public class uiController : MonoBehaviour
         _MoneyValueUI = GameObject.Find("MoneyValueTextUI").GetComponent<TextMeshProUGUI>();
 
         
-        _WheatValue = GameObject.Find("WheatValueText").GetComponent<TextMeshProUGUI>();
-        _FishValue = GameObject.Find("FishValueText").GetComponent<TextMeshProUGUI>();
-        _MoneyValuePause = GameObject.Find("MoneyValueTextPause").GetComponent<TextMeshProUGUI>();
-        _DebtValue = GameObject.Find("DebtValueText").GetComponent<TextMeshProUGUI>();
 
         _PauseUI.SetActive(false);
         _PauseOverlay.SetActive(false);
@@ -100,7 +94,7 @@ public class uiController : MonoBehaviour
     void PauseGame()
     {
         if (_PauseUI.activeSelf == true)
-        {   
+        {
             _MoneyUI.SetActive(true);
             _PauseOverlay.SetActive(false);
             _PauseUI.SetActive(false);
@@ -108,8 +102,6 @@ public class uiController : MonoBehaviour
         }
         else
         {
-            _MoneyValuePause.text = _Inventory._PlayerMoney.ToString();
-            _DebtValue.text = "€1,000,000";
 
             _MoneyUI.SetActive(false);
             _PauseUI.SetActive(true);

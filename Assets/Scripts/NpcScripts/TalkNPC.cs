@@ -6,14 +6,13 @@ public class TalkNPC : MonoBehaviour, I_Interactable
 
 
 
-    private GameObject _PlayerObj;
+
     private GameObject _UiControl;
     public NpcObj _NpcObj;
 
 
     void Awake()
     {
-        _PlayerObj = GameObject.Find("Player");
         _UiControl = GameObject.Find("UI");
 
     }

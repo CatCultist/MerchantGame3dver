@@ -7,7 +7,10 @@ public class TextBoxController : MonoBehaviour
 
     [HideInInspector] public GameObject _NpcGameObject;
     [HideInInspector] public NpcObj _NpcObj;
-    
+
+
+
+
 
     [SerializeField] private GameObject _DialogueBox;
     [SerializeField] private Image _DialogueSprite;
@@ -18,31 +21,40 @@ public class TextBoxController : MonoBehaviour
     private int _TextPages = 0;
 
     [SerializeField] private GameObject _NpcSprite;
-    [SerializeField] private GameObject _TextBack;
+
     [SerializeField] private GameObject _TextScript;
 
     private bool _FirstLinePrinted;
+
+    private QuestManager _QuestManager;
 
 
     public void StartDialogue()
     {
         _NpcObj = _NpcGameObject.GetComponent<TalkNPC>()._NpcObj;
 
-        _NpcSprite.SetActive(true);
-        _TextBack.SetActive(true);
-        _TextScript.SetActive(true);
-        
+        foreach(Transform _Child in gameObject.transform)
+        {
+            _Child.gameObject.SetActive(true);
+        }
         _NpcSprite.GetComponent<Image>().sprite = _NpcObj._NpcTalkSprite[0];
-        
+
         _TextPages = _NpcObj._NpcDialogue.Length;
         WriteDialogue();
     }
 
     public void EndDialogue()
     {
+
+        foreach (Transform _Child in gameObject.transform)
+        {
+            _Child.gameObject.SetActive(false);
+        }
+        /*
         _NpcSprite.SetActive(false);
         _TextBack.SetActive(false);
         _TextScript.SetActive(false);
+        */
         _UiControl.GetComponent<uiController>().TalkUI();
         _FirstLinePrinted = false;
         _TextStep = 0;
@@ -52,83 +64,48 @@ public class TextBoxController : MonoBehaviour
     {
         Debug.Log(_TextStep);
         Debug.Log(_TextPages);
-        //switch case to determine what type of text the npc is about to give you
-        switch (_NpcObj._DialogueType)
+
+        //this case will simply display a text box until the player progress through it
+        if (_TextStep < _TextPages)
         {
-            //Case for ambient dialogue
-            case 0:
-                //this case will simply display a text box until the player progress through it **note; add gradual text reveal
-                if (_TextStep < _TextPages)
-                {
-                    _DialogueField.text = _NpcObj._NpcDialogue[_TextStep];
-                }
-                else if (_TextStep <= _TextPages)
-                {
-                    EndDialogue();
-                }
-                else
-                {
-                    Debug.Log("Something broke; Text step error");
-                    gameObject.SetActive(false);
-                }
-
-
-                break;
-
-            //Case for dialogue that leads into trading
-            case 1:
-                //this case will display a text box and lead to a dialogue option to trade; then either bring up the trading screen or return to gameplay
-                if (_TextStep < _TextPages)
-                {
-                    _DialogueField.text = _NpcObj._NpcDialogue[_TextStep];
-                }
-                else if (_TextStep <= _TextPages)
-                {
-                    BeginTrading();
-                }
-                else
-                {
-                    Debug.Log("Something broke; Text step error");
-                    gameObject.SetActive(false);
-                }
-                
-
-
-
-                break;
-            //Case for dialogue that sets a flag
-            case 2:
-                //this case is for npcs that will give the player a quest, or set other flags, when spoken to
-                if (_TextStep <= _TextPages)
-                {
-                    _DialogueField.text = _NpcObj._NpcDialogue[_TextStep];
-                }
-                else if (_TextStep <= _TextPages)
-                {
-                    EndDialogue();
-                }
-                else
-                {
-                    Debug.Log("Something broke; Text step error");
-                    gameObject.SetActive(false);
-                }
-
-
-                break;
-
-            //default case if the int is invalid
-            default:
-                Debug.Log("Something went wrong with NPC Dialogue Type");
-                break;
+            _DialogueField.text = _NpcObj._NpcDialogue[_TextStep];
+            _QuestManager.SetQuestFlag(1, 1);
         }
+        else if (_TextStep <= _TextPages && !_NpcObj._TradeAvailable)
+        {
+            EndDialogue();
+
+
+
+            return;
+        }
+
+        else if (_TextStep <= _TextPages && _NpcObj._TradeAvailable) { BeginTrading(); return; }
+
+        else
+        {
+            Debug.Log("Something broke; Text step error");
+            gameObject.SetActive(false);
+        }
+
+
+
     }
 
+
     public void BeginTrading()
-    {   
+    {
+        foreach (Transform _Child in gameObject.transform)
+        {
+            _Child.gameObject.SetActive(false);
+        }
+
         _MerchantUI._NpcGameObject = _NpcGameObject;
+        /*
         _NpcSprite.SetActive(false);
         _TextBack.SetActive(false);
         _TextScript.SetActive(false);
+        */
         _MerchantUI.StartTrading();
         _TextStep = 0;
         _FirstLinePrinted = false;

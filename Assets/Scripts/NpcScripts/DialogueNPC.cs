@@ -8,8 +8,8 @@ public class NpcObj : ScriptableObject
     [Tooltip("ID number for the NPC")]
     public int _NpcID;
 
-    [Tooltip("what talking with the NPC will do")]
-    public int _DialogueType;
+    [Tooltip("will talking with the NPC bring up a shop?")]
+    public bool _TradeAvailable;
 
     [Tooltip("the npc's face sprite for dialogue")]
     public Sprite[] _NpcTalkSprite;

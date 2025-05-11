@@ -69,9 +69,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde3ec80ecf9c5b48a9147aaaf362b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheatCount: 2
-  fishCount: 3
-  moneyCount: 5
+  _ItemList: []
+  _PlayerMoney: 0
 --- !u!114 &3491831486618231948
 MonoBehaviour:
   m_ObjectHideFlags: 0
