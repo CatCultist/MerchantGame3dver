@@ -727,6 +727,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 155337470260110494, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 876123825}
+    - targetCorrespondingSourceObject: {fileID: 155337470260110494, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 876123826}
   m_SourcePrefab: {fileID: 100100000, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
 --- !u!4 &876123820 stripped
 Transform:
@@ -755,6 +758,21 @@ MonoBehaviour:
   _InteractableMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &876123826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876123821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f736ec3083f64547aa41e330ec0119e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _QuestList:
+  - {fileID: 11400000, guid: 472a21268cbe08340b52b87940c1bb04, type: 2}
+  - {fileID: 11400000, guid: 0fc2c2ba31958b442a6002cbbc9877c6, type: 2}
 --- !u!1 &983192332
 GameObject:
   m_ObjectHideFlags: 0
@@ -15911,7 +15929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 670594448987721498, guid: 427880f7309f9814482d6320b21264fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.66
+      value: -7.03
       objectReference: {fileID: 0}
     - target: {fileID: 670594448987721498, guid: 427880f7309f9814482d6320b21264fa, type: 3}
       propertyPath: m_LocalRotation.w

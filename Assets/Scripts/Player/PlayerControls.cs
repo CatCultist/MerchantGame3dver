@@ -103,14 +103,12 @@ public class PlayerControls : MonoBehaviour
             }
             //----
 
-
-
-            //}
-
+            /*
             if (_Pause.triggered)
             {
                 PauseGame();
             }
+            */
 
 
     }
@@ -174,7 +172,8 @@ public class PlayerControls : MonoBehaviour
         //----
 
         //class for managing pause boolean
-        public void PauseGame()
+        
+    /*public void PauseGame()
         {
             if (!_Paused)
             {
@@ -187,5 +186,5 @@ public class PlayerControls : MonoBehaviour
                 Time.timeScale = 1f;
             }
 
-        }
+        }*/
     }

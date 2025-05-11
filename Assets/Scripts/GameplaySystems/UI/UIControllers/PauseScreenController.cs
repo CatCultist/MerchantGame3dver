@@ -12,6 +12,7 @@ public class PauseScreenController : MonoBehaviour
     void OnEnable()
     {
         _PlayerObj = GameObject.Find("Player");
+        _PlayerObj.GetComponent<PlayerControls>()._Paused = true;
         _QuestManager = _PlayerObj.GetComponent<QuestManager>();
         foreach (var _Quest in _QuestManager._QuestList)
         {
@@ -22,10 +23,13 @@ public class PauseScreenController : MonoBehaviour
                 _Entry.GetComponent<JournalEntry>().WriteEntry(_Quest);
             }
         }
+
+
     }
 
     private void OnDisable()
     {
+        _PlayerObj.GetComponent<PlayerControls>()._Paused = false;
         foreach (Transform _Entry in _JournalGrid)
         {
             Destroy(_Entry.gameObject);

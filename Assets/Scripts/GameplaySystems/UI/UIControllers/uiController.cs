@@ -36,6 +36,8 @@ public class uiController : MonoBehaviour
     private static uiController instance = null;
     //--
 
+    //lockout interaction
+    private float _InteractLockout;
     private void Awake()
     {
         //avoid creating duplicates of UI object across scenes
@@ -86,6 +88,10 @@ public class uiController : MonoBehaviour
             _TextBoxUI.GetComponent<TextBoxController>().AdvanceOnInput();
         }
 
+        if(_InteractLockout >= 0)
+        {
+            _InteractLockout -= 1 * Time.deltaTime;
+        }
 
         _MoneyValueUI.text = _Inventory._PlayerMoney.ToString();
 
@@ -112,22 +118,24 @@ public class uiController : MonoBehaviour
     public void TalkUI()
     {
         _TextBoxUI.GetComponent<TextBoxController>()._NpcGameObject = _NpcGameObject;
-        if (_TalkToNPC)
+        if (!_TalkToNPC && _InteractLockout <= 0)
         {
-
-            _PauseOverlay.SetActive(false);
-            _PlayerObj.GetComponent<PlayerControls>()._Paused = false;
-
-            _TalkToNPC = false;
-        }
-        else if (!_TalkToNPC)
-        {
-            
             _TextBoxUI.GetComponent<TextBoxController>().StartDialogue();
             _PauseOverlay.SetActive(true);
             _PlayerObj.GetComponent<PlayerControls>()._Paused = true;
-
+            Debug.Log("Begin dialogue");
             _TalkToNPC = true;
+            
+        }
+        else if (_TalkToNPC)
+        {
+            _InteractLockout = 1;
+        
+            _PauseOverlay.SetActive(false);
+            _PlayerObj.GetComponent<PlayerControls>()._Paused = false;
+
+
+            _TalkToNPC = false;
         }
     }
 }

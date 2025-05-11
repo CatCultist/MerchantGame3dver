@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OldBaker
   m_EditorClassIdentifier: 
   _NpcID: 0
-  _DialogueType: 1
+  _TradeAvailable: 1
   _NpcTalkSprite:
   - {fileID: 1749794875, guid: 032edd1f2d9c8784dbf97a999f73eb4c, type: 3}
   - {fileID: 1343119494, guid: 032edd1f2d9c8784dbf97a999f73eb4c, type: 3}

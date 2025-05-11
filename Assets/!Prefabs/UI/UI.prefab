@@ -1898,6 +1898,7 @@ GameObject:
   - component: {fileID: 6411399663913032727}
   - component: {fileID: 355882964358648583}
   - component: {fileID: 4515458863224896207}
+  - component: {fileID: 3727740863368788043}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -1992,6 +1993,26 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3727740863368788043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5644187047289157830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910d8ba5600824c4d9b4b9289d00175c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _MoneyUI: {fileID: 7201284724962571109}
+  _PauseOverlay: {fileID: 5212000945489474534}
+  _PauseUI: {fileID: 6976832634225217255}
+  _TextBoxUI: {fileID: 1600823874781693366}
+  _NpcGameObject: {fileID: 0}
+  _TalkToNPC: 0
+  _IsTrading: 0
+  _TradeUI: {fileID: 5582694515825713805}
 --- !u!1 &6976832634225217255
 GameObject:
   m_ObjectHideFlags: 0

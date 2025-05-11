@@ -21,6 +21,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 937315212920313794, guid: ad415c6db04929e4aa8559ab82cb1f80, type: 3}
+      propertyPath: _NpcObj
+      value: 
+      objectReference: {fileID: 11400000, guid: 4fa8f64091cdce2459f2a6e2fe5d9c52, type: 2}
+    - target: {fileID: 937315212920313794, guid: ad415c6db04929e4aa8559ab82cb1f80, type: 3}
       propertyPath: _NpcStock
       value: 
       objectReference: {fileID: 6948366836776214247}

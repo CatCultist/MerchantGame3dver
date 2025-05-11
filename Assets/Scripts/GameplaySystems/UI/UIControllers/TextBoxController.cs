@@ -28,11 +28,17 @@ public class TextBoxController : MonoBehaviour
 
     private QuestManager _QuestManager;
 
+    private void Awake()
+    {
+        _QuestManager = GameObject.Find("Player").GetComponent<QuestManager>();
+    }
 
     public void StartDialogue()
     {
+        _FirstLinePrinted = false;
+        _TextStep = 0;
         _NpcObj = _NpcGameObject.GetComponent<TalkNPC>()._NpcObj;
-
+        Debug.Log("Start dialogue");
         foreach(Transform _Child in gameObject.transform)
         {
             _Child.gameObject.SetActive(true);
@@ -45,7 +51,7 @@ public class TextBoxController : MonoBehaviour
 
     public void EndDialogue()
     {
-
+        Debug.Log("End dialogue");
         foreach (Transform _Child in gameObject.transform)
         {
             _Child.gameObject.SetActive(false);
@@ -55,9 +61,9 @@ public class TextBoxController : MonoBehaviour
         _TextBack.SetActive(false);
         _TextScript.SetActive(false);
         */
+        Debug.Log(_UiControl.GetComponent<uiController>()._TalkToNPC);
         _UiControl.GetComponent<uiController>().TalkUI();
-        _FirstLinePrinted = false;
-        _TextStep = 0;
+
     }
 
     public void WriteDialogue()
@@ -69,18 +75,20 @@ public class TextBoxController : MonoBehaviour
         if (_TextStep < _TextPages)
         {
             _DialogueField.text = _NpcObj._NpcDialogue[_TextStep];
-            _QuestManager.SetQuestFlag(1, 1);
+            
         }
-        else if (_TextStep <= _TextPages && !_NpcObj._TradeAvailable)
+        else if (_TextStep >= _TextPages && !_NpcObj._TradeAvailable)
         {
+            
+            _QuestManager.SetQuestFlag(1, 1);
             EndDialogue();
-
-
-
             return;
+
+            
         }
 
-        else if (_TextStep <= _TextPages && _NpcObj._TradeAvailable) { BeginTrading(); return; }
+        else if (_TextStep <= _TextPages && _NpcObj._TradeAvailable) 
+        { BeginTrading(); return; }
 
         else
         {
@@ -109,6 +117,7 @@ public class TextBoxController : MonoBehaviour
         _MerchantUI.StartTrading();
         _TextStep = 0;
         _FirstLinePrinted = false;
+        Debug.Log("Begin trade");
 
     }
     public void AdvanceOnInput()
