@@ -15,7 +15,7 @@ public class FaceMe : MonoBehaviour
     {
         if(mLookAt)
         {
-            localTrans.LookAt(2*localTrans.position-mLookAt.transform.position);
+            transform.forward = mLookAt.transform.forward;
         }
     }
 

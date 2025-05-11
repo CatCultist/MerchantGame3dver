@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9e086eb42816e944189a0b36201bac26
+guid: 68b2e0c98916ce840af1a2cacfea8796
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Small Text Box_0
+      name: Lil Textbox_0
       rect:
         serializedVersion: 2
         x: 0
@@ -112,14 +112,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e32093f09957b504cb36f98e9166a792
-      internalID: 2005345242
+      spriteID: 062bcbb64d6adf447aeccf5a383f74b9
+      internalID: 1973895460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Small Text Box_1
+      name: Lil Textbox_1
       rect:
         serializedVersion: 2
         x: 64
@@ -134,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 511f90128c0bbf6469e2dcaf80daa0cb
-      internalID: 1987990015
+      spriteID: fe13246992f82e742b1266e31de14127
+      internalID: 381134113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Small Text Box_2
+      name: Lil Textbox_2
       rect:
         serializedVersion: 2
         x: 128
@@ -156,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c64a93974b76e31419353bb7f0155b51
-      internalID: 1073089258
+      spriteID: 65beecdbe9a5f5f488dc8a4a30293b34
+      internalID: 2107861931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Small Text Box_3
+      name: Lil Textbox_3
       rect:
         serializedVersion: 2
         x: 192
@@ -178,8 +178,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0067d0f29b9ccf64ba64738bc1b41f8e
-      internalID: -31846166
+      spriteID: f63b92047ea350e4c983a1b2600e70db
+      internalID: -1974370994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lil Textbox_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d12686c0ff6894eaed62869d603965
+      internalID: -266223994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lil Textbox_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f79f63595d0b44da333b059e8a6d06
+      internalID: -1168353426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lil Textbox_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a322a089187d3ea4a828a82554d3ab27
+      internalID: -2103109636
       vertices: []
       indices: 
       edges: []
@@ -188,7 +254,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: a35e57ef885ef484580d0004c784c958
     internalID: 0
     vertices: []
     indices: 
@@ -198,10 +264,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Small Text Box_0: 2005345242
-      Small Text Box_1: 1987990015
-      Small Text Box_2: 1073089258
-      Small Text Box_3: -31846166
+      Lil Textbox_0: 1973895460
+      Lil Textbox_1: 381134113
+      Lil Textbox_2: 2107861931
+      Lil Textbox_3: -1974370994
+      Lil Textbox_4: -266223994
+      Lil Textbox_5: -1168353426
+      Lil Textbox_6: -2103109636
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
