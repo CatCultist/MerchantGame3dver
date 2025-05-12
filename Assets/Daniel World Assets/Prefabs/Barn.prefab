@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 2492354191422617484}
   - component: {fileID: 2173753604903531669}
   - component: {fileID: 8036784286915293648}
+  - component: {fileID: 143413426389434412}
   m_Layer: 0
   m_Name: Barn
   m_TagString: Untagged
@@ -292,3 +293,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &143413426389434412
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8079035969536302174}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.768756, y: 4.567912, z: 4.321957}
+  m_Center: {x: -2.9994254, y: 0.9999997, z: 2.1557329}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6397483753976001502}
   - component: {fileID: 6420251808699770787}
   - component: {fileID: 1271299022619902672}
+  - component: {fileID: 3173454106444066029}
   m_Layer: 0
   m_Name: fisherman hut
   m_TagString: Untagged
@@ -86,6 +87,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3173454106444066029
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6392501366751921261}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.2283783, y: 3.8424373, z: 2.9391139}
+  m_Center: {x: 0, y: 0.04987537, z: 0.40945828}
 --- !u!1 &8503562006573248444
 GameObject:
   m_ObjectHideFlags: 0

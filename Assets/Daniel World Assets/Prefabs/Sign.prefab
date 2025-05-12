@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1904757678345259396}
   - component: {fileID: 8543282856263129129}
   - component: {fileID: 3876098331063987825}
+  - component: {fileID: 285474523148317837}
   m_Layer: 0
   m_Name: Sign post
   m_TagString: Untagged
@@ -87,6 +88,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &285474523148317837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4161873603804752215}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.21352401, y: 0.21352406, z: 2.5030837}
+  m_Center: {x: 0.000000090409564, y: -0.000000114823244, z: 1.2152784}
 --- !u!1 &4273674468595685025
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,13 +167,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4736024397875026902}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.062365428, y: 0.70435125, z: -0.062364925, w: 0.7043511}
-  m_LocalPosition: {x: 0.14029026, y: -0.057977676, z: 2.1105022}
+  m_LocalRotation: {x: -0.6950456, y: -0.026892917, z: -0.7172449, w: 0.041811544}
+  m_LocalPosition: {x: 0.157, y: -0.005, z: 2.111}
   m_LocalScale: {x: 0.82647514, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1904757678345259396}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -5.549, y: 88.136, z: -178.699}
 --- !u!33 &2492295189610783978
 MeshFilter:
   m_ObjectHideFlags: 0
