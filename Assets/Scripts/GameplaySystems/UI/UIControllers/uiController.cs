@@ -18,7 +18,7 @@ public class uiController : MonoBehaviour
 
     //player object to refer to public variables
      private GameObject _PlayerObj;
-     private InventoryController _Inventory;
+     private InventoryManager _PlayerInv;
     //--
 
     //text boxes
@@ -57,7 +57,7 @@ public class uiController : MonoBehaviour
 
     void Start()
     { 
-        _Inventory = _PlayerObj.GetComponent<InventoryController>();
+        _PlayerInv = _PlayerObj.GetComponent<InventoryManager>();
         _NpcGameObject = null;
         _MoneyValueUI = GameObject.Find("MoneyValueTextUI").GetComponent<TextMeshProUGUI>();
 
@@ -93,7 +93,7 @@ public class uiController : MonoBehaviour
             _InteractLockout -= 1 * Time.deltaTime;
         }
 
-        _MoneyValueUI.text = _Inventory._PlayerMoney.ToString();
+        _MoneyValueUI.text = _PlayerInv.PlayerBalance.ToString();
 
     }
 

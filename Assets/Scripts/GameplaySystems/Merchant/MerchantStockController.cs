@@ -11,7 +11,7 @@ namespace GameplaySystems.Merchant
         private TradeGoods.TradeGoods[] startingGoods;
         public float MerchantBalance {get; private set;}
 
-        private Dictionary<TradeGoods.TradeGoods, int> merchantGoodStock = new Dictionary<TradeGoods.TradeGoods, int>();
+        public Dictionary<TradeGoods.TradeGoods, int> merchantGoodStock = new Dictionary<TradeGoods.TradeGoods, int>();
         
         public void Start()
         {
