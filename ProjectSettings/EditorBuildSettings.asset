@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/!Scenes/WheatVillage.unity
     guid: 61fbb8512ab5399449c8558634627904
+  - enabled: 1
+    path: Assets/Map/Map.unity
+    guid: 76ef12df255dbe949833b855844ecdaf
+  - enabled: 1
+    path: Assets/!Scenes/PortCity.unity
+    guid: ff6b03e788120a64390a6aad1366536e
+  - enabled: 1
+    path: Assets/!Scenes/PortVillage.unity
+    guid: f67729a8e7b438d4fafbdc3fe56375ce
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
