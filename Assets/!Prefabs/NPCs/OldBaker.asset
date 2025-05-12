@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28fee4ceaa873c4cb78e97911e41062, type: 3}
+  m_Name: OldBaker
+  m_EditorClassIdentifier: 
+  _NpcID: 0
+  _DialogueType: 0
+  _NpcTalkSprite:
+  - {fileID: 1749794875, guid: 032edd1f2d9c8784dbf97a999f73eb4c, type: 3}
+  - {fileID: 1343119494, guid: 032edd1f2d9c8784dbf97a999f73eb4c, type: 3}
+  - {fileID: -460921799, guid: 032edd1f2d9c8784dbf97a999f73eb4c, type: 3}
+  _NpcDialogue:
+  - Why hello, Sonny!
+  - I am just an old baker, nobody to concern yourself with.
+  - I can only speak thrice before my mind is wiped. This is the end for lil' ol'
+    me, my dear.
+  _NpcName: Sandra
