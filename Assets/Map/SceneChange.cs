@@ -1,20 +1,24 @@
+
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class ToMap : MonoBehaviour
+
+public class SceneChange : MonoBehaviour
 {
-    public int ExitNumber;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void OnTriggerEnter(Collider other)
-    {
-        PlayerPrefs.SetInt("Exit", ExitNumber);
-    }
+    public Object scene;
     void Start()
     {
         
     }
 
     // Update is called once per frame
+   
+    public void SceneChanger()
+    {
+        SceneManager.LoadScene(scene.name);
+    }
     void Update()
     {
         
