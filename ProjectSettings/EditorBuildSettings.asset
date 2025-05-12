@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/!Scenes/PortVillage.unity
     guid: f67729a8e7b438d4fafbdc3fe56375ce
   - enabled: 1
+    path: Assets/!Scenes/WheatCity.unity
+    guid: b52c857e2bacd524cba6007ec82d4ff0
+  - enabled: 1
     path: Assets/!Scenes/WheatVillage.unity
     guid: 61fbb8512ab5399449c8558634627904
   - enabled: 1
