@@ -40,7 +40,7 @@ namespace GameplaySystems.Merchant
             _merchantUIController = GameObject.Find("MerchantUIParent").GetComponent<MerchantUIController>();
         }
         
-        public void OnItemPurchase(string itemID, int quantity, float itemPrice, float playerPrice)
+        public bool OnItemPurchase(string itemID, int quantity, float itemPrice, float playerPrice)
         {
             var desiredTrade = merchantSpecialty.desiredGoods;
             var undesiredTrade = merchantSpecialty.unDesiredGoods;
@@ -72,14 +72,14 @@ namespace GameplaySystems.Merchant
             var randomNumber = random.Next(1, 100);
 
             int merchantScoreChange;
-            if (randomNumber > _transactionChance)
+            if (randomNumber > (_transactionChance * 100 + 1))
             {
                 Debug.Log("Merchant rejects offer - lose opinion"); // For debugging, replace with UI functionality
                 merchantScoreChange = Convert.ToInt32(_transactionChance - randomNumber);
                 MerchantScore += Convert.ToInt32(merchantScoreChange * merchantHostility);
                 Debug.Log(merchantScoreChange.ToString() + " merchant score");
                 _merchantUIController.NpcResponse(2);
-                return;
+                return false;
             }
 
             Debug.Log("Merchant accepts offer - gain opinion");  // For debugging, replace with UI functionality
@@ -90,9 +90,10 @@ namespace GameplaySystems.Merchant
             Debug.Log(merchantScoreChange.ToString() + " merchant score");
 
             _merchantStock.OnRemoveStock(itemID, quantity, playerPrice);
+            return true;
         }
 
-        public void OnItemSold(string itemID, int quantity, float itemPrice, float playerPrice)
+        public bool OnItemSold(string itemID, int quantity, float itemPrice, float playerPrice)
         {
             var doNotTrade = merchantSpecialty.impossibleGoods;
             var desiredTrade = merchantSpecialty.desiredGoods;
@@ -134,24 +135,30 @@ namespace GameplaySystems.Merchant
             var randomNumber = random.Next(1, 100);
 
             int merchantScoreChange;
-            if (randomNumber > _transactionChance)
+            if (randomNumber >= (_transactionChance * 100 + 1))
             {
+                Debug.Log("Chance" + _transactionChance);
+                Debug.Log("Offer" + playerPrice);
+
                 Debug.Log("Merchant rejects offer - lose opinion"); // For debugging, replace with UI functionality
                 merchantScoreChange = Convert.ToInt32(_transactionChance - randomNumber);
                 MerchantScore += Convert.ToInt32(merchantScoreChange * merchantHostility);
                 Debug.Log(merchantScoreChange.ToString() + " merchant score");
                 _merchantUIController.NpcResponse(2);
-                return;
+                return false;
             }
 
             Debug.Log("Merchant accepts offer - gain opinion");  // For debugging, replace with UI functionality
+
+
             merchantScoreChange = Convert.ToInt32(_transactionChance - randomNumber);
             MerchantScore += merchantScoreChange;
             _merchantUIController.NpcResponse(1);
-
+            
             Debug.Log(merchantScoreChange.ToString() + " merchant score");
 
             _merchantStock.OnAddStock(itemID, quantity, playerPrice);
+            return true;
         }
 
         public void OnWeekPay()

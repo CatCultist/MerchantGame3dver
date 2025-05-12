@@ -24,7 +24,7 @@ public class InventoryManager : MonoBehaviour
             Destroy(gameObject);
         }
         Instance = this;
-        PlayerBalance += 50;
+        PlayerBalance += 5;
         playerGoodStock.Add(_TestGood, _TestGoodCount);
         Debug.Log(PlayerBalance);
 
@@ -55,12 +55,15 @@ public class InventoryManager : MonoBehaviour
             {
                 if (playerGoodStock[stockedGood.Key] < quantity)
                 {
+                    Debug.Log(tradeGood);
                     Debug.Log("The player does not have enough of that item to sell that quantity, try lowering the quantity.");
                     return;
                 }
                 var currentQuantity = playerGoodStock[stockedGood.Key];
                 playerGoodStock[stockedGood.Key] = currentQuantity - quantity;
                 PlayerBalance += price;
+                
+                Debug.Log("Balance" + PlayerBalance);
                 return;
             }
         }

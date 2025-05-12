@@ -450,6 +450,10 @@ PrefabInstance:
       propertyPath: _TestGood
       value: 
       objectReference: {fileID: 11400000, guid: 0b04878de5cc41949bdb90fcea63721a, type: 2}
+    - target: {fileID: 8895238874822677942, guid: 8936537b6ec5b7c4f83511bd4098feb3, type: 3}
+      propertyPath: _TestGoodCount
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -727,41 +731,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509044509}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1548837343 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5950273093607693386, guid: ad415c6db04929e4aa8559ab82cb1f80, type: 3}
-  m_PrefabInstance: {fileID: 7198789852303010313}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1548837349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548837343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bca8119ad96e83842835f97cd327cb6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingGoods:
-  - {fileID: 11400000, guid: 9b4b14eb4a3ff154f97d7fde496cee88, type: 2}
---- !u!114 &1548837350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548837343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37680ac269d1c0243be81e2cde6cf089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  merchantBargainingPower: 1
-  merchantHostility: 0
-  merchantSalary: 10
-  merchantSpecialty: {fileID: 11400000, guid: 0b0b909f363e162458ba5bd553ca3cef, type: 2}
 --- !u!1 &1655991243
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,7 +943,7 @@ PrefabInstance:
     - target: {fileID: 937315212920313794, guid: ad415c6db04929e4aa8559ab82cb1f80, type: 3}
       propertyPath: _NpcStock
       value: 
-      objectReference: {fileID: 1548837349}
+      objectReference: {fileID: 0}
     - target: {fileID: 1682646675124057020, guid: ad415c6db04929e4aa8559ab82cb1f80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5
@@ -1023,16 +992,14 @@ PrefabInstance:
       propertyPath: _MainCamera
       value: 
       objectReference: {fileID: 1918075585}
+    - target: {fileID: 6566663330348783188, guid: ad415c6db04929e4aa8559ab82cb1f80, type: 3}
+      propertyPath: merchantBargainingPower
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5950273093607693386, guid: ad415c6db04929e4aa8559ab82cb1f80, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1548837349}
-    - targetCorrespondingSourceObject: {fileID: 5950273093607693386, guid: ad415c6db04929e4aa8559ab82cb1f80, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1548837350}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad415c6db04929e4aa8559ab82cb1f80, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

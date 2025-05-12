@@ -8,6 +8,7 @@ public class PauseScreenController : MonoBehaviour
 
     private GameObject _PlayerObj;
     private QuestManager _QuestManager;
+    [SerializeField] private TextMeshProUGUI _PlayerBalance;
 
     void OnEnable()
     {
@@ -23,6 +24,7 @@ public class PauseScreenController : MonoBehaviour
                 _Entry.GetComponent<JournalEntry>().WriteEntry(_Quest);
             }
         }
+        _PlayerBalance.text = "Balance: " + _PlayerObj.GetComponent<InventoryManager>().PlayerBalance.ToString() + "g";
 
 
     }

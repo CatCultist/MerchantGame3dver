@@ -5,6 +5,7 @@ using GameplaySystems.TradeGoods;
 using UnityEngine.UI;
 using Unity.VisualScripting;
 using UnityEditor;
+using System.Runtime.CompilerServices;
 
 public class MerchantUIController : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class MerchantUIController : MonoBehaviour
 
 
     //initialize buttons for each good
-
-
+    [HideInInspector] public Vector3 _SlotPos;
+    private TradeGoods _SelectedGood;
 
 
     private GameObject _PlayerObj;
@@ -33,6 +34,7 @@ public class MerchantUIController : MonoBehaviour
     [HideInInspector] public int _Quantity;
     [HideInInspector] public float _PlayerOffer;
     [SerializeField] private GameObject _OfferField;
+
 
     //Npc text box + sprite
     [SerializeField] private Image _NpcFace;
@@ -98,7 +100,7 @@ public class MerchantUIController : MonoBehaviour
             
             var _ItemInstance = Instantiate(_ItemSlotPrefab);
             _ItemInstance.transform.SetParent(_PlayerInvScreen, true);
-            _ItemInstance.GetComponent<ItemHolderInv>().SetGood(_Item.Key);
+            _ItemInstance.GetComponent<ItemHolderInv>().SetGood(_Item.Key, _Item.Value);
 
         }
 
@@ -108,46 +110,44 @@ public class MerchantUIController : MonoBehaviour
             var _ItemInstance = Instantiate(_ItemSlotPrefab);
             _ItemInstance.transform.SetParent(_NpcInvScreen, true);
             _ItemInstance.GetComponent<ItemHolderInv>()._IsNpcItem = true;
-            _ItemInstance.GetComponent<ItemHolderInv>().SetGood(_Item.Key);
+            _ItemInstance.GetComponent<ItemHolderInv>().SetGood(_Item.Key, _Item.Value);
 
         }
 
     }
 
-    public void RefreshButtons()
+    private void Refresh()
     {
+        _PlayerMoneyField.text = _PlayerInv.PlayerBalance.ToString();
+        
         //Player side
         foreach (Transform _Slot in _PlayerInvScreen)
         {
-            Destroy(_Slot.gameObject);
+            if (_Slot.gameObject.GetComponent<ItemHolderInv>()._GoodSelected)
+            {
+                _Slot.gameObject.GetComponent<ItemHolderInv>().Refresh();
+                _SelectedGood = _Slot.gameObject.GetComponent<ItemHolderInv>()._TradeGood;
+            }
+            else { Destroy(_Slot.gameObject); }
+            
         }
-
-
         foreach (var _Item in _PlayerInv.playerGoodStock)
         {
-
-            var _ItemInstance = Instantiate(_ItemSlotPrefab);
-            _ItemInstance.transform.SetParent(_PlayerInvScreen, true);
-            _ItemInstance.GetComponent<ItemHolderInv>().SetGood(_Item.Key);
-
+            if (_Item.Key != _SelectedGood)
+            {
+                var _ItemInstance = Instantiate(_ItemSlotPrefab);
+                _ItemInstance.transform.SetParent(_PlayerInvScreen, true);
+                _ItemInstance.GetComponent<ItemHolderInv>().SetGood(_Item.Key, _Item.Value);
+            }
         }
+
 
         //Npc side
         foreach (Transform _Slot in _NpcInvScreen)
         {
-            Destroy(_Slot.gameObject);
+            _Slot.gameObject.GetComponent<ItemHolderInv>().Refresh();
         }
 
-
-        foreach (var _Item in _NpcInv.merchantGoodStock)
-        {
-
-            var _ItemInstance = Instantiate(_ItemSlotPrefab);
-            _ItemInstance.transform.SetParent(_NpcInvScreen, true);
-            _ItemInstance.GetComponent<ItemHolderInv>()._IsNpcItem = true;
-            _ItemInstance.GetComponent<ItemHolderInv>().SetGood(_Item.Key);
-
-        }
 
     }
 
@@ -188,9 +188,14 @@ public class MerchantUIController : MonoBehaviour
 
                 case 1:
                     Debug.Log("Sell item!");
-                    _NpcGameObject.GetComponent<IMerchantInteract>().OnItemSold(_TradeGood.tradeGoodID, _Quantity, _TradeGood.tradeGoodBasePrice, _PlayerOffer);
+                    
+                if (_NpcGameObject.GetComponent<IMerchantInteract>().OnItemSold(_TradeGood.tradeGoodID, _Quantity, _TradeGood.tradeGoodBasePrice, _PlayerOffer))
+                {
+                    _PlayerInv.ItemSold(_TradeGood, 1, _PlayerOffer);
+                    
+                    Refresh();
+                }
 
-                RefreshButtons();
                     break;
 
                 case 2:
@@ -198,7 +203,12 @@ public class MerchantUIController : MonoBehaviour
                     Debug.Log("Buy item!");
                     _NpcGameObject.GetComponent<IMerchantInteract>().OnItemPurchase(_TradeGood.tradeGoodID, _Quantity, _TradeGood.tradeGoodBasePrice, _PlayerOffer);
 
-                RefreshButtons();
+                if (_NpcGameObject.GetComponent<IMerchantInteract>().OnItemPurchase(_TradeGood.tradeGoodID, _Quantity, _TradeGood.tradeGoodBasePrice, _PlayerOffer))
+                {
+                    _PlayerInv.ItemPurchased(_TradeGood, 1, _PlayerOffer);
+                    
+                    Refresh();
+                }
                     break;
             }
         }
