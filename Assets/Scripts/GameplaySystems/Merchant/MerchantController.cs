@@ -38,7 +38,11 @@ namespace GameplaySystems.Merchant
             _merchantStock = GetComponent<MerchantStockController>();
         }
         
+<<<<<<< HEAD
         public void OnItemPurchase(string itemID, int quantity, float itemPrice, float playerPrice)
+=======
+        public void OnItemPurchase(TradeGoods.TradeGoods tradeGood, string itemID, int quantity, float itemPrice, float playerPrice)
+>>>>>>> ciaran
         {
             var desiredTrade = merchantSpecialty.desiredGoods;
             var undesiredTrade = merchantSpecialty.unDesiredGoods;
@@ -86,9 +90,16 @@ namespace GameplaySystems.Merchant
             Debug.Log(merchantScoreChange.ToString() + " merchant score");
 
             _merchantStock.OnRemoveStock(itemID, quantity, playerPrice);
+<<<<<<< HEAD
         }
 
         public void OnItemSold(string itemID, int quantity, float itemPrice, float playerPrice)
+=======
+            InventoryManager.Instance.ItemPurchased(tradeGood, quantity, playerPrice);
+        }
+
+        public void OnItemSold(TradeGoods.TradeGoods tradeGood, string itemID, int quantity, float itemPrice, float playerPrice)
+>>>>>>> ciaran
         {
             var doNotTrade = merchantSpecialty.impossibleGoods;
             var desiredTrade = merchantSpecialty.desiredGoods;
@@ -146,6 +157,10 @@ namespace GameplaySystems.Merchant
             Debug.Log(merchantScoreChange.ToString() + " merchant score");
 
             _merchantStock.OnAddStock(itemID, quantity, playerPrice);
+<<<<<<< HEAD
+=======
+            InventoryManager.Instance.ItemSold(tradeGood, quantity, playerPrice);
+>>>>>>> ciaran
         }
 
         public void OnWeekPay()
