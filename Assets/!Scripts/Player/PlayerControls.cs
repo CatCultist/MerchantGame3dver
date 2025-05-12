@@ -86,9 +86,11 @@ public class PlayerControls : MonoBehaviour
             {
                 _MoveDirection = _Move.ReadValue<Vector2>();
             }
-
+        if (_MoveDirection != Vector2.zero)
+        {
             animator.SetFloat("xmov", _MoveDirection.x);
             animator.SetFloat("ymov", _MoveDirection.y);
+        }
 
             //rotate _MoveDirection vector2 45 degrees
             //_MoveDirection = Rotate(_MoveDirection, -45);
