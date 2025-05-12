@@ -10,6 +10,7 @@ public class InventoryManager : MonoBehaviour
     public Dictionary<TradeGoods, int> playerGoodStock = new Dictionary<TradeGoods, int>();
 
     public TradeGoods _TestGood;
+    public int _TestGoodCount;
 
     private void Awake()
     {
@@ -20,7 +21,7 @@ public class InventoryManager : MonoBehaviour
         }
         Instance = this;
         PlayerBalance += 50;
-        playerGoodStock.Add(_TestGood, 2);
+        playerGoodStock.Add(_TestGood, _TestGoodCount);
         Debug.Log(PlayerBalance);
 
     }

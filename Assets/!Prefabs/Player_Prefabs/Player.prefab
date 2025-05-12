@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4409438599823026087}
   - component: {fileID: 3491831486618231948}
   - component: {fileID: 8895238874822677942}
-  - component: {fileID: 1164883521210785515}
   - component: {fileID: 5307608744504570004}
   - component: {fileID: 2460327206450630776}
   m_Layer: 0
@@ -122,23 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _TestGood: {fileID: 0}
---- !u!114 &1164883521210785515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 155337470260110494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce88072f975f3a740860881635c17882, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _InteractionPoint: {fileID: 4051649953378778301}
-  _InteractionRadius: 1
-  _InteractableMask:
-    serializedVersion: 2
-    m_Bits: 128
+  _TestGoodCount: 0
 --- !u!114 &5307608744504570004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,8 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _QuestList:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 472a21268cbe08340b52b87940c1bb04, type: 2}
+  - {fileID: 11400000, guid: 0fc2c2ba31958b442a6002cbbc9877c6, type: 2}
 --- !u!1 &1472048779802338743
 GameObject:
   m_ObjectHideFlags: 0
