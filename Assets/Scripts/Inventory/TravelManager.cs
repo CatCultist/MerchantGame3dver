@@ -20,7 +20,7 @@ public class TravelManager : MonoBehaviour
         Instance = this;
     }
 
-    public void OnTravel()
+    public void OnTravel(SceneAsset town)
     {
         var travelSafetyThreshold = 100 * travelSafetyModifier;
 
@@ -32,6 +32,8 @@ public class TravelManager : MonoBehaviour
         }
 
         TimeManager.Instance.AdvanceDays();
+
+        // SceneManager.LoadScene(town -- pass in the scene value, LoadSceneMode.Single)
     }
 
     private void OnBanditAttack()
