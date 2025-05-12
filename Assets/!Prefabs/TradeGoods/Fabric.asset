@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdbd5f9ef3d7de4281ad20f4919d475, type: 3}
+  m_Name: Fabric
+  m_EditorClassIdentifier: 
+  tradeGoodID: F12
+  tradeGoodName: Fabric
+  tradeGoodDescription: Very important for townies, also used as simple clothes for
+    lower strata townies and those in warm climates
+  tradeGoodBasePrice: 2
+  tradeGoodBaseRestock: 600
+  tradeGoodBaseConsumption: 29
+  tradeGoodBaseProduction: 825
+  tradeGoodBaseProductionRate: 1
+  tradeGoodBaseDays:
+  - Monday
+  - Wednesday
+  - Friday

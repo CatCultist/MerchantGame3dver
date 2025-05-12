@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdbd5f9ef3d7de4281ad20f4919d475, type: 3}
+  m_Name: Bread
+  m_EditorClassIdentifier: 
+  tradeGoodID: B10
+  tradeGoodName: Bread
+  tradeGoodDescription: Made from grain by bakerys, staple food everywhere, a little
+    bit less accessible than grain for low income townies
+  tradeGoodBasePrice: 3
+  tradeGoodBaseRestock: 280
+  tradeGoodBaseConsumption: 10
+  tradeGoodBaseProduction: 315
+  tradeGoodBaseProductionRate: 1
+  tradeGoodBaseDays:
+  - Wednesday
+  - Saturday
