@@ -14,7 +14,7 @@ public class PurchaseManager : MonoBehaviour
 
     [SerializeField] private TimeManager timeManager;
     
-    private string _goodId;
+    private int _goodId;
     private float _price;
     
 
@@ -26,23 +26,21 @@ public class PurchaseManager : MonoBehaviour
     }
     void Purchase()
     {
-        _goodId = good.tradeGoodID;
-        _price = good.tradeGoodBasePrice * scarcityMultiplier;
-        if (inventory._PlayerMoney >= _price)
+        _goodId = good.id;
+        _price = good.basePrice * scarcityMultiplier;
+        if (inventory.moneyCount >= _price)
         {
             inventory.Take(_goodId, _price);
+            Debug.Log("Purchased wheat for: ");
+            Debug.Log(_price);
         }
         Debug.Log("You're broke bruh");
     }
 
     public void ButtonPressed()
     {
-        //timeManager.AdvanceTime();
+        timeManager.AdvanceTime();
         Purchase();
     }
-<<<<<<<< HEAD:Assets/Scripts/GameplaySystems/Merchant/PurchaseManager.cs
     */
-========
-
->>>>>>>> main:Assets/!Scripts/GameplaySystems/Merchant/PurchaseManager.cs
 }
