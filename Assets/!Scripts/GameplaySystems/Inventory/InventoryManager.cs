@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using GameplaySystems.TradeGoods;
 using UnityEngine;
 
@@ -11,6 +13,8 @@ public class InventoryManager : MonoBehaviour
 
     public TradeGoods _TestGood;
     public int _TestGoodCount;
+
+    private System.Random random = new System.Random();
 
     private void Awake()
     {
@@ -64,9 +68,13 @@ public class InventoryManager : MonoBehaviour
         Debug.LogError("The player has none of that item to sell, somethings gone wrong somewhere else");
     }
 
-    public void ItemDestroyed(TradeGoods tradeGood, int quantity)
+    public void ItemDestroyed()
     {
+        var randomGood = playerGoodStock.ElementAt(random.Next(0, playerGoodStock.Count)).Key;
 
+        var randomLostQauntity = random.Next(0, playerGoodStock[randomGood] / 2);
+
+        playerGoodStock[randomGood] -= randomLostQauntity;
     }
 
     public void BalanceGained(float moneyValue)
@@ -74,9 +82,14 @@ public class InventoryManager : MonoBehaviour
 
     }
 
-    public void BalanceLost(float moneyValue)
+    public void BalanceLost()
     {
-        
+        if (PlayerBalance > 100f)
+        {
+            var randomLostBalance = random.Next(1, Convert.ToInt32(PlayerBalance / 10f));
+
+            PlayerBalance -= randomLostBalance;
+        }
     }
 
 }
