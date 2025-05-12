@@ -1,10 +1,11 @@
 using GameplaySystems.TradeGoods;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TravelManager : MonoBehaviour
 {
-    public TravelManager Instance {get; private set;}
+    public static TravelManager Instance {get; private set;}
 
     [Range (0f, 1f)]
     public float travelSafetyModifier = 0.7f;
@@ -23,6 +24,7 @@ public class TravelManager : MonoBehaviour
 
     public void OnTravel(string _TownName)
     {
+        Debug.Log("Scene Loaded");
         var travelSafetyThreshold = 100 * travelSafetyModifier;
 
         var randomNumber = random.Next(1, 100);
@@ -32,9 +34,13 @@ public class TravelManager : MonoBehaviour
             OnBanditAttack();
         }
 
+        SceneManager.LoadScene(_TownName);
+
         TimeManager.Instance.AdvanceDays();
 
-        // SceneManager.LoadScene(town -- pass in the scene value, LoadSceneMode.Single)
+
+
+
     }
 
     private void OnBanditAttack()
