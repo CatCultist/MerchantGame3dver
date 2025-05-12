@@ -49,10 +49,7 @@ public class MerchantUIController : MonoBehaviour
         _PlayerInv = _PlayerObj.GetComponent<InventoryManager>();
         _UiControl = GameObject.Find("UI");
 
-        _PlayerMoney.SetActive(false);
-        _ShopPanels.SetActive(false);
-        _NpcUI.SetActive(false);
-        _ButtonManager.SetActive(false);
+        foreach (Transform _Child in gameObject.transform) { _Child.gameObject.SetActive(false);}
 
 
     }

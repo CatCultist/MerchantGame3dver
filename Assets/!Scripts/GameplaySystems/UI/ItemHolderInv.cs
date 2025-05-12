@@ -10,6 +10,7 @@ public class ItemHolderInv : MonoBehaviour, IPointerClickHandler
     private MerchantUIController _MerchantUI;
     private Vector3 _DefaultPos;
     public bool _IsNpcItem;
+    private bool _GoodSelected;
     //[SerializeField] private GameObject _ItemWindow;
      void Awake()
     {
@@ -36,13 +37,19 @@ public class ItemHolderInv : MonoBehaviour, IPointerClickHandler
                 if (_IsNpcItem) { _MerchantUI._TradeType = 2; }
                 else { _MerchantUI._TradeType = 1; }
                 _MerchantUI._TradeGood = _TradeGood;
-                transform.position = _OfferPosition.position + new Vector3(0, 50, 0);
+                transform.position = _OfferPosition.position + new Vector3(0, 20, 0);
+                _GoodSelected = true;
                 
             }
             else
             {
-                transform.position = _DefaultPos;
-                _MerchantUI._TradeType = 0;
+                if (_GoodSelected)
+                {
+                    
+                    transform.position = _DefaultPos;
+                    _MerchantUI._TradeType = 0;
+                    _GoodSelected = false;
+                }
             }
             //_ItemWindow.SetActive(true);
             //_ItemWindow.transform.position = gameObject.transform.position;

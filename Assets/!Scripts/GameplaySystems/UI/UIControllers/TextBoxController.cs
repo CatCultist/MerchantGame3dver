@@ -31,6 +31,11 @@ public class TextBoxController : MonoBehaviour
     private void Awake()
     {
         _QuestManager = GameObject.Find("Player").GetComponent<QuestManager>();
+
+        foreach (Transform _Child in gameObject.transform)
+        {
+            _Child.gameObject.SetActive(false);
+        }
     }
 
     public void StartDialogue()

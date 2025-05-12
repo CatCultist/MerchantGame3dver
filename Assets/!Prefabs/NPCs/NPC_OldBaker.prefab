@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6488446359273361528}
   - component: {fileID: 937315212920313794}
   - component: {fileID: -135499857526637287}
+  - component: {fileID: 6566663330348783188}
+  - component: {fileID: 4285204958639544960}
   m_Layer: 7
   m_Name: NPC_OldBaker
   m_TagString: Untagged
@@ -137,3 +139,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4, y: 4, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6566663330348783188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5950273093607693386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37680ac269d1c0243be81e2cde6cf089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  merchantBargainingPower: 1
+  merchantHostility: 0
+  merchantSalary: 10
+  merchantSpecialty: {fileID: 11400000, guid: 0b0b909f363e162458ba5bd553ca3cef, type: 2}
+--- !u!114 &4285204958639544960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5950273093607693386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca8119ad96e83842835f97cd327cb6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingGoods:
+  - {fileID: 11400000, guid: f4b8ed225c514ba4da286cc0c40c4c75, type: 2}
