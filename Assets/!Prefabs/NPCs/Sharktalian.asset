@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28fee4ceaa873c4cb78e97911e41062, type: 3}
+  m_Name: Sharktalian
+  m_EditorClassIdentifier: 
+  _NpcID: 1
+  _DialogueType: 2
+  _NpcTalkSprite:
+  - {fileID: -1673851720, guid: 1bb068a53641a5b4c940d1a3bfb726d6, type: 3}
+  - {fileID: -1004771052, guid: 1bb068a53641a5b4c940d1a3bfb726d6, type: 3}
+  - {fileID: -1538464589, guid: 1bb068a53641a5b4c940d1a3bfb726d6, type: 3}
+  _NpcDialogue:
+  - Hey, kid. Workin' hard?
+  - Remember my money, a'wright?
+  _ReactionDialogue: []
+  _NpcName: Loan-Sharktalian
