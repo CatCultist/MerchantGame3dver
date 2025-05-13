@@ -15,10 +15,10 @@ MonoBehaviour:
   desiredGoods:
   - {fileID: 11400000, guid: 478af1f4245cd594a91357c94a98b29d, type: 2}
   unDesiredGoods:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f4b8ed225c514ba4da286cc0c40c4c75, type: 2}
   stapleGoods:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 478af1f4245cd594a91357c94a98b29d, type: 2}
   soldGoods:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f4b8ed225c514ba4da286cc0c40c4c75, type: 2}
   impossibleGoods:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f4b8ed225c514ba4da286cc0c40c4c75, type: 2}

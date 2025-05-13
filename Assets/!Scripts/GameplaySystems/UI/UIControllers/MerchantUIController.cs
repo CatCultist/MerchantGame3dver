@@ -70,7 +70,8 @@ public class MerchantUIController : MonoBehaviour
         {
             Destroy(_Slot.gameObject);
         }
-
+        _TradeType = 0;
+        
         _PlayerMoney.SetActive(false);
         _ShopPanels.SetActive(false);
         _NpcUI.SetActive(false);
@@ -201,7 +202,7 @@ public class MerchantUIController : MonoBehaviour
                 case 2:
 
                     Debug.Log("Buy item!");
-                    _NpcGameObject.GetComponent<IMerchantInteract>().OnItemPurchase(_TradeGood.tradeGoodID, _Quantity, _TradeGood.tradeGoodBasePrice, _PlayerOffer);
+                    
 
                 if (_NpcGameObject.GetComponent<IMerchantInteract>().OnItemPurchase(_TradeGood.tradeGoodID, _Quantity, _TradeGood.tradeGoodBasePrice, _PlayerOffer))
                 {
