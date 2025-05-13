@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class ToMap : MonoBehaviour
 {
     public int ExitNumber;
-    public Object MapScene;
+    
     public LayerMask _PlayerLayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -13,7 +13,7 @@ public class ToMap : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerPrefs.SetInt("Exit", ExitNumber);
-            SceneManager.LoadScene(MapScene.name);
+            SceneManager.LoadScene("Map");
         }
     }
     void Start()
