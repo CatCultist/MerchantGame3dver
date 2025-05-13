@@ -24,7 +24,7 @@ public class MapManager : MonoBehaviour
         {
             button.SetActive(false);
         }
-        foreach(GameObject local in Location[0/*PlayerPrefs.GetInt("Exit")*/].Close)
+        foreach(GameObject local in Location[PlayerPrefs.GetInt("Exit")].Close)
         {
             local.SetActive(true);
         }
