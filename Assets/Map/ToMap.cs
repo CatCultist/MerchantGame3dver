@@ -5,12 +5,16 @@ public class ToMap : MonoBehaviour
 {
     public int ExitNumber;
     public Object MapScene;
+    public LayerMask _PlayerLayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void OnTriggerEnter(Collider other)
     {
-        PlayerPrefs.SetInt("Exit", ExitNumber);
-        SceneManager.LoadScene(MapScene.name);
+        if (other.CompareTag("Player"))
+        {
+            PlayerPrefs.SetInt("Exit", ExitNumber);
+            SceneManager.LoadScene(MapScene.name);
+        }
     }
     void Start()
     {
