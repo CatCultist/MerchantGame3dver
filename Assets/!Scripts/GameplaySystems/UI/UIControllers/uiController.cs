@@ -66,6 +66,9 @@ public class uiController : MonoBehaviour
         _PauseUI.SetActive(false);
         _PauseOverlay.SetActive(false);
 
+        _TradeUI.SetActive(true);
+        _TextBoxUI.SetActive(true);
+
         //_TextBoxUI.SetActive(false);
     }
 
