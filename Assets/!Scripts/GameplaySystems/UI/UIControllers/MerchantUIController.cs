@@ -166,7 +166,7 @@ public class MerchantUIController : MonoBehaviour
             _PlayerOffer = 0;
         }
 
-        if (_PlayerOffer > _PlayerInv.PlayerBalance)
+        if (_PlayerOffer > _PlayerInv.PlayerBalance && _TradeType == 2)
         {
             Debug.Log("Money clamped");
             _OfferField.GetComponent<TMP_InputField>().text = _PlayerInv.PlayerBalance.ToString();

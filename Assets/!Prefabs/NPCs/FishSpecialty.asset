@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2a51d800f2407046bf108d0c48b39c2, type: 3}
-  m_Name: OldBakerSpecialty
+  m_Name: FishSpecialty
   m_EditorClassIdentifier: 
   desiredGoods:
-  - {fileID: 11400000, guid: 9b4b14eb4a3ff154f97d7fde496cee88, type: 2}
+  - {fileID: 11400000, guid: 0b04878de5cc41949bdb90fcea63721a, type: 2}
   unDesiredGoods:
-  - {fileID: 11400000, guid: a296cf9dfa26fef42ab3812bdf2c3252, type: 2}
+  - {fileID: 11400000, guid: 478af1f4245cd594a91357c94a98b29d, type: 2}
   stapleGoods:
-  - {fileID: 11400000, guid: 9b4b14eb4a3ff154f97d7fde496cee88, type: 2}
+  - {fileID: 11400000, guid: 478af1f4245cd594a91357c94a98b29d, type: 2}
   soldGoods:
-  - {fileID: 11400000, guid: 9b4b14eb4a3ff154f97d7fde496cee88, type: 2}
+  - {fileID: 11400000, guid: 478af1f4245cd594a91357c94a98b29d, type: 2}
   impossibleGoods:
-  - {fileID: 11400000, guid: f4b8ed225c514ba4da286cc0c40c4c75, type: 2}
+  - {fileID: 11400000, guid: 478af1f4245cd594a91357c94a98b29d, type: 2}
