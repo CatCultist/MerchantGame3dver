@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be50534b48769246bb9dfdd509fae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _TestGood: {fileID: 0}
-  _TestGoodCount: 0
+  _TestGood: {fileID: 11400000, guid: 0b04878de5cc41949bdb90fcea63721a, type: 2}
+  _TestGoodCount: 3
 --- !u!114 &5307608744504570004
 MonoBehaviour:
   m_ObjectHideFlags: 0

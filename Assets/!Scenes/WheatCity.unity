@@ -71924,7 +71924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3142208789783796793, guid: aeff92a4365eced4792f2fee84250838, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.57
       objectReference: {fileID: 0}
     - target: {fileID: 3142208789783796793, guid: aeff92a4365eced4792f2fee84250838, type: 3}
       propertyPath: m_LocalPosition.z
@@ -71961,6 +71961,14 @@ PrefabInstance:
     - target: {fileID: 3767029604541080962, guid: aeff92a4365eced4792f2fee84250838, type: 3}
       propertyPath: m_Name
       value: NPC_Fox
+      objectReference: {fileID: 0}
+    - target: {fileID: 6233753243304698445, guid: aeff92a4365eced4792f2fee84250838, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.112
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456021446630929704, guid: aeff92a4365eced4792f2fee84250838, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

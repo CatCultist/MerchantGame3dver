@@ -85,7 +85,7 @@ public class TextBoxController : MonoBehaviour
         else if (_TextStep >= _TextPages && !_NpcObj._TradeAvailable)
         {
             
-            _QuestManager.SetQuestFlag(1, 1);
+            _QuestManager.SetQuestFlag(1, 2);
             EndDialogue();
             return;
 
